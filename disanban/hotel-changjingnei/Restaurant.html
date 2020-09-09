@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>餐饮</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta  http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />	
+		<link href="css/Restaurant.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/oder.js"></script>
+	</head>
+	<body style=" background: #f1f1f1;">
+	<!--头部-->
+	<div class="top">
+		<p>
+			<a href="shop.html"><img src="images/m_icon_1.png"></a>餐饮
+		</p>
+	</div>
+	<div class="top1">
+		<p>
+			<a href="shop.html"><img src="images/m_back2.png"></a>餐饮
+		</p>
+	</div>
+	<!--头部-->
+	<!--主体-->
+		<div class="min">
+			<a href="table-reservation.html"><p class="min_r">餐桌预定</p></a>
+			<p>查看菜品</p>
+		</div>		
+	<!--主体-->
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		
+		
+		
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			$(function(){
+				$('.min p').click(function(){
+					$(this).css('background','#0859a4');
+				})
+			});
+		</script>
+	</body>
+</html>

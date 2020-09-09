@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>西餐-提交订单</title>
+		<link rel="stylesheet" type="text/css" href="css/lu_canyin.css" />
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="background-color: #f1f1f1;">
+		<div class="sub_order_can">
+			<div class="nav_bar clearfix">
+				<div class="col-3">
+					<a href="javascript:;" class="back"><img src="images/back-arrow.png" alt="" /></a>
+				</div>
+				<div class="col-6 title">提交订单</div>
+				<div class="col-3 right"></div>
+			</div>
+			<!--nav     ed-->
+			<div class="l_container mess_person">
+				<img src="images/bar.png" alt="" />
+				<div class="l_content">
+					<p class="room"><span class="left">配送至房间</span><span class="right"><input maxlength="8" type="text" placeholder="例如:803" class="yan_room"/>号</span></p>
+					<p><span class="left">联系人</span><span class="right"><input maxlength="10" type="text" placeholder="(必填)请填写真实姓名" class="yan_name"/></span></p>
+					<p><span class="left">手机号</span><span class="right"><input type="number" placeholder="(必填)请填写手机号码" class="yan_phone"/></span></p>
+					<p class="last"><span class="left">备注留言</span><span class="right"><input type="text" placeholder="特殊要求" maxlength='20'/></span></p>
+				</div>
+			</div>
+			<div class="l_container mess_can">
+				<h3 class="title_can">餐饮详情</h3>
+				<div class="l_content">
+					<p>
+						<span class="one"><i>牛奶咖啡沙琪玛混合拍</i><br/><i class="z_notenough">库存不足，可买100件</i></span>
+						<span class="two">x<em>556</em></span>
+						<span class="three">￥<em>1900.00</em></span>
+					</p>
+					<p>
+						<span class="one"><i>牛奶</i><br/><i class="z_notenough">库存不足，可买100件</i></span>
+						<span class="two">x<em>56</em></span>
+						<span class="three">￥<em>190.00</em></span>
+					</p>
+					<p>
+						<span class="one"><i>牛奶咖啡</i><br/><i class="z_notenough">库存不足，可买100件</i></span>
+						<span class="two">x<em>5</em></span>
+						<span class="three">￥<em>1.00</em></span>
+					</p>
+					<p class="last_can">
+						<span class="one">共<em>979</em>件商品</span>
+						<span class="two">需付款:<i>￥<em>3000.00</em></i></span>
+					</p>
+					<div class="l_tip">
+						<p class="time">支付方式:&nbsp;前台记账</p>
+						<p>发票信息:&nbsp;请到前台获取</p>
+					</div>
+				</div>
+			</div>
+			<div class="l_container bad_goods">
+				<h3 class="title">失效商品</h3>
+				<div class="l_content">
+					<p>奶油蒜蓉烤大虾烤大虾<span>已失效</span></p>
+					<p>奶油蒜蓉烤大虾<span>已售罄</span></p>
+					<p>奶油蒜蓉<span>不支持线上购买</span></p>
+				</div>
+			</div>
+			<p class="foot_bar_sub"><span>总额:<i>￥<em>30000.00</em>元</i></span>
+				<a href="javascript:;" class="sub_btn">提交订单</a>
+			</p>
+		</div>
+
+		<!--验证提示-->
+		<p class="yan_tip">请填写完整信息！</p>
+		<!--订单提交成功弹窗-->
+		<div class="tan_drop tan1">
+			<div class="tan_box">
+				<img src="images/icon_success.png" alt="" />
+				<p class="text">订单提交成功</p>
+				<p class="btn1 room_btn">
+					<a href="Room_list.html">查看订单</a>
+				</p>
+				<p class="btn2 room_btn">
+					<a href="index_canyin.html">继续看看</a>
+				</p>
+			</div>
+		</div>
+		<!--订单提交失败弹窗-->
+		<div class="tan_drop tan2">
+			<div class="tan_box">
+				<img src="images/icon_error.png" alt="" />
+				<p class="text">订单提交失败，请重新提交</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">保存订单</a>
+				</p>
+			</div>
+		</div>
+
+		<!--返回弹窗-->
+		<div class="tan_drop tan4">
+			<div class="tan_box">
+				<p class="text">您确定放弃提交订单吗？</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;" class="cancle">取消</a>
+					<a href="javascript:;" class="ok">确定</a>
+				</p>
+			</div>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".back").click(function() {
+					$(".tan4").fadeIn();
+					$("body").css({
+						"position": "fixed",
+						"top": "0",
+						"bottom": "0",
+						"left": "0",
+						"width": "100%"
+					});
+				})
+				$(".cancle").click(function() {
+					$(this).parents(".tan_drop").fadeOut();
+					$("body").removeAttr("style")
+				})
+			})
+		</script>
+		<script type="text/javascript">
+			//表单验证
+			$(function() {
+				$(".foot_bar_sub .sub_btn").click(function() {
+					var ok1;
+					var ok2;
+					var ok3;
+					var ok4;
+					if($(".yan_room").val().length == 0) {
+						ok1 = false;
+					} else {
+						ok1 = true;
+					}
+					if($(".yan_name").val().length == 0) {
+						ok2 = false;
+					} else {
+						ok2 = true;
+					}
+
+					if($(".yan_phone").val().length == 0) {
+						ok3 = false;
+					} else {
+						ok3 = true;
+					}
+					/*手机验证*/
+					var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|18[0-9]|14[57]|17[0-9])[0-9]{8}$/;
+					console.log(reg.test($(".yan_phone").val()))
+					if(!reg.test($(".yan_phone").val())) {
+						ok4 = false;
+					} else {
+						ok4 = true;
+					}
+
+					if(ok1 && ok2 && ok3) {
+						if(ok4) {
+							$(".tan1").fadeIn();
+							$(".yan_tip").hide();
+						} else {
+							$(".yan_tip").html("手机号码格式不正确")
+							$(".yan_tip").stop(true, true).fadeIn().delay(1000).fadeOut();
+						}
+					} else {
+						$(".yan_tip").stop(true, true).fadeIn().delay(1000).fadeOut();
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

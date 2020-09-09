@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>餐饮订单</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link href="css/Restaurant.css" type="text/css" rel="stylesheet" />		
+		<script src="js/oder.js"></script>
+	</head>
+	<body>
+	<!--头部-->
+	<div class="top">
+		<p>
+			<a href="index.html"><img src="images/m_icon_1.png"></a>餐饮订单
+		</p>			
+	</div>
+	<div class="top1">
+		<p>
+			<a href="shop.html"><img src="images/m_back2.png"></a>餐饮
+		</p>
+	</div>
+	<!--头部-->	
+	<!--主体-->
+	<div class="list_box">
+		<div class="s_head">
+			<ul class="clear">
+				<li class="fl">
+					<a href="javascript:;" class="active">餐桌订单<span class="on1"></span><i class="on"></a>
+				</li>
+				<li class="s_center fl">
+					<a href="javascript:;">订桌 订单<span></span><i></i></a>
+				</li>			
+			</ul>
+		</div>
+		<div class="clear_box">
+			<div class="s_min_box">
+				<a href="details_d.html">
+					<div class="kapian">
+						<div class="s_rcot">
+							<p class=" clear">
+								<span class="black fl">餐桌</span>
+								<span class="s_red fr">待提交</span>
+							</p>
+							<p class="s_tet clear">
+								<span class="fl">用餐时间 : </span>
+								<span class="fl">&nbsp;2016-10-09  10 : 00</span>								
+							</p>							
+							<p class="s_frist clear">
+								<span class="fl">用餐人数 :&nbsp; </span>
+								<span class="fl"> 4人</span>
+								<span class="s_hei fr">仅包间</span>
+							</p>
+						</div>	
+					</div>
+				</a>
+				<a href="details_b.html">
+					<div class="kapian s_ka">
+						<div class="s_rcot">
+							<p class=" clear">
+								<span class="black fl">餐桌</span>
+								<span class="s_red fr s_hui">已完成</span>
+							</p>
+							<p class="s_tet clear">
+								<span class="fl">用餐时间 : </span>
+								<span class="fl">&nbsp;2016-10-09  10 : 00</span>								
+							</p>							
+							<p class="s_frist clear">
+								<span class="fl">用餐人数 :&nbsp; </span>
+								<span class="fl"> 4人</span>
+								<span class="s_hei fr">仅包间</span>
+							</p>
+						</div>
+						<p class="k_shdow"></p>
+						<p class="ka_img"><img src="images/m_yin.png" /></p>
+					</div>
+				</a>
+				<a href="details.html">
+					<div class="kapian">
+						<div class="s_rcot">
+							<p class=" clear">
+								<span class="black fl">餐桌</span>
+								<span class="s_red fr s_hui">待确认</span>
+							</p>
+							<p class="s_tet clear">
+								<span class="fl">用餐时间 : </span>
+								<span class="fl">&nbsp;2016-10-09  10 : 00</span>								
+							</p>							
+							<p class="s_frist clear">
+								<span class="fl">用餐人数 :&nbsp; </span>
+								<span class="fl"> 4人</span>
+								<span class="s_hei fr">仅包间</span>
+							</p>
+						</div>	
+					</div>
+				</a>
+				<a href="details_a.html">
+					<div class="kapian">
+						<div class="s_rcot">
+							<p class=" clear">
+								<span class="black fl">餐桌</span>
+								<span class="s_red fr s_hui">预定成功</span>
+							</p>
+							<p class="s_tet clear">
+								<span class="fl">用餐时间 : </span>
+								<span class="fl">&nbsp;2016-10-09  10 : 00</span>								
+							</p>							
+							<p class="s_frist clear">
+								<span class="fl">用餐人数 :&nbsp; </span>
+								<span class="fl"> 10人</span>
+								<span class="s_hei fr">仅大厅</span>
+							</p>
+						</div>	
+					</div>	
+				</a>
+				<a href="details_c.html">
+					<div class="kapian">
+						<div class="s_rcot">
+							<p class=" clear">
+								<span class="black fl">餐桌</span>
+								<span class="s_red fr s_hui">交易关闭</span>
+							</p>
+							<p class="s_tet clear">
+								<span class="fl">用餐时间 : </span>
+								<span class="fl">&nbsp;2016-10-09  10 : 00</span>								
+							</p>							
+							<p class="s_frist clear">
+								<span class="fl">用餐人数 :&nbsp; </span>
+								<span class="fl"> 4人</span>
+								<span class="s_hei fr">包间优选</span>
+							</p>
+						</div>	
+					</div>	
+				</a>
+			</div>			
+		</div>
+	</div>	
+	<!--主体-->
+	<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		
+		<script>
+			$(function(){
+				$('.s_head ul li a').click(function(){
+					$('.s_head ul li a').find('span').removeClass('on1');
+					$('.s_head ul li a').find('i').removeClass('on');
+					$('.s_head ul li a').removeClass('active');
+					$(this).find('span').addClass('on1');
+					$(this).find('i').addClass('on');
+					$(this).addClass('active');
+				});
+			});
+		</script>
+	</body>
+</html>

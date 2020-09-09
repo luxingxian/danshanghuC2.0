@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>选择收货地址</title>
+		<link rel="stylesheet" type="text/css" href="css/LArea.css" />
+		<link rel="stylesheet" href="css/shop.css" />
+
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<div class="content_box content_box_edu">
+			<div class="l_container nav_bar">
+				<div class="l_content clearfix">
+					<div class="col-2 back">
+						<a href="javascript:;"><img src="images/back2.png" /></a>
+					</div>
+					<div class="col-8 title">
+						<h1>选择收货地址</h1></div>
+					<div class="col-2 icons">
+					</div>
+				</div>
+			</div>
+			<!------------nav_bar    ed-->
+			<div class="s_margin">
+				<div class="l_container edu_mess clearfix">
+					<div class="l_content clearfix">
+						<div class="col-1">
+							<i class="radio s_radio"></i>
+						</div>
+						<div class="col-10">
+							<p class="name_phone"><span>周可文<i>[默认]</i></span> <span class="float-right">153****7135</span></p>
+							<p class="text_box">北京 北京市 朝阳区 酒仙桥中路先锋金融大厦</p>
+						</div>
+					</div>
+					<a href="edu-address.html">
+						<p class="s_mis float-right">编辑</p>
+					</a>
+				</div>
+				<div class="l_container edu_mess clearfix">
+					<div class="l_content clearfix">
+						<div class="col-1">
+							<i class="radio"></i>
+						</div>
+						<div class="col-10">
+							<p class="name_phone"><span>周可文<i>[默认]</i></span> <span class="float-right">153****7135</span></p>
+							<p class="text_box">北京 北京市 朝阳区 酒仙桥中路先锋金融大厦</p>
+						</div>
+					</div>
+					<a href="edu-address.html">
+						<p class="s_mis float-right">编辑</p>
+					</a>
+				</div>
+				<div class="l_container edu_mess clearfix">
+					<div class="l_content clearfix">
+						<div class="col-1">
+							<i class="radio"></i>
+						</div>
+						<div class="col-10">
+							<p class="name_phone"><span>周可文<i>[默认]</i></span> <span class="float-right">153****7135</span></p>
+							<p class="text_box">北京 北京市 朝阳区 酒仙桥中路先锋金融大厦</p>
+						</div>
+					</div>
+					<a href="edu-address.html">
+						<p class="s_mis float-right">编辑</p>
+					</a>
+				</div>
+			</div>
+			<div class="l_container foot">
+				<p>
+					<a href="add-address.html">+ 新建地址</a>
+				</p>
+			</div>
+
+		</div>
+
+		<!--无网络弹窗-->
+		<div class="no_network1 tan3">
+			<div class="tan_box1">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				//				支付形式单选效果
+				$(".s_radio").parent().next().find("i").show();
+				$(".col-1 .radio").click(function() {
+					$('.col-1 .radio').removeClass("s_radio");
+					$(this).addClass("s_radio");
+					$(".s_margin .col-10 i").hide();
+					$(this).parent().next().find("i").show();
+				})
+			})
+		</script>
+	</body>
+
+</html>

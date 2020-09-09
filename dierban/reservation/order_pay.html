@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>中州假日酒店-订单支付</title>
+		<link rel="stylesheet" type="text/css" href="css/lu.css"/>
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="background-color: #f1f1f1;">
+		<div class="order_pay">
+			<p class="nav">
+				<a href="javascript:;" class="back_icon"><img src="images/icon_back.png" alt="" /></a>
+				订单支付
+			</p>
+			<!--nav    ed-->
+			<div class="l_container l_card">
+				<div class="l_content">
+					<div class="hotel_mess">
+						<p>入住 <span>10月05日</span>离店 <span>10月20日</span></p>
+						<p>房型 <span>高级大床房</span><i class="jian"><em>1</em>间&nbsp;&nbsp;<em>16</em>晚</i></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="l_container hotel_add">
+				<div class="l_content">
+					<p class="hotel_name">中州郑州假日酒店<span></span></p>
+					<p class="hotel_phone"><a href="" class="l_first"><img src="images/icon_loca.png" alt="" /><span>酒店地址</span></a><a href="javascript:;"><img src="images/icon_call.png" alt="" /><span>联系酒店</span></a></p>
+				</div>
+			</div>
+			
+			<div class="l_container l_person">
+				<div class="l_content clearfix">
+					<p class="l_left">入住人</p>
+					<p class="l_right">车南</p>
+					<p class="l_left">手机号码</p>
+					<p class="l_right">18518099332</p>
+					<p class="l_left">入住偏好</p>
+					<p class="l_right">无</p>
+					<div class="l_tip">
+						<p class="time">保留时间&nbsp;&nbsp;2016-08-27&nbsp;&nbsp;&nbsp;18:00之前</p>
+						<p>如果需要索取发票，请到前台领取</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="l_container room_m">
+				<div class="l_content">
+					<h3>房费信息<img src="images/icon_down.png" alt="" /></h3>
+					<div class="toggle_list">
+						<p><span class="one">2016-08-26</span><span class="two">x80</span><span class="three">￥10.00</span></p>
+						<p><span class="one">2016-08-26</span><span class="two">x8</span><span class="three">￥190.00</span></p>
+						<p><span class="one">2016-08-26</span><span class="two">x890</span><span class="three">￥19800.00</span></p>
+						<p><span class="p">微信支付享8.8折优惠</span><span class="n">-￥4.00</span></p>
+						<p><span class="p">提前预订享9.8折优惠(立减10元)</span><span class="n">-￥400.00</span></p>
+						<p><span>总价：</span><span>￥7777777.00</span></p>
+						<p><span>共优惠：</span><span class="you">-￥17.00</span></p>
+						<p><span>实付金额：</span><span>￥1588.00</span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="l_container room_m room_o">
+				<div class="l_content">
+					<h3>订单信息<img src="images/icon_down.png" alt="" /></h3>
+					<div class="toggle_list">
+						<p><span>订单编号</span><span>000111222333444</span></p>
+						<p><span>支付方式</span><span>微信支付</span></p>
+						<p><span>提交时间</span><span><em>2016-06-27</em>&nbsp;&nbsp;&nbsp;<em>18:45</em></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="pay_foot">
+			<p class="pay_foot_bar">
+				<img src="images/icon_time.png" alt="" />
+				<span class="time_down">30:00</span>
+				<a href="javascript:;">立即支付</a>
+			</p>
+		</div>
+		
+		<!--订单提交失败弹窗-->
+		<div class="tan_drop tan5">
+			<div class="tan_box">
+				<img src="images/icon_warn.png" alt="" />
+				<p class="text">支付失败，请重新支付</p>
+				<p class="btn3 room_btn"><a href="javascript:;">保存订单</a></p>
+			</div>
+		</div>
+		
+		<!--房型不可预订弹窗-->
+		<div class="tan_drop tan6">
+			<div class="tan_box">
+				<p class="text">支付尚未完成，是否取消支付</p>
+				<p class="btn3 room_btn"><a href="javascript:;">确定</a></p>
+			</div>
+		</div>
+		<!------------------页面-----------ed---->
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".room_m h3").click(function(){
+					$(this).next(".toggle_list").slideToggle();
+					if($(this).find("img").attr("src")=="images/icon_down.png"){
+						$(this).find("img").attr("src","images/icon_up.png");
+					}else{
+						$(this).find("img").attr("src","images/icon_down.png")
+					}
+				})
+				//30分钟倒计时	
+				var min=30;
+				var sec=00;
+				function time_down(){
+					sec--;
+					if(sec<0){
+						min--;
+						sec=59;
+					}
+					if(min<0){
+						min=0;
+					}
+					if(sec<10){
+						$(".time_down").html(min+":0"+sec)
+					}else{
+						$(".time_down").html(min+":"+sec)	
+					}	
+				}
+				setInterval(function(){time_down();},1000)
+		
+			})
+		</script>
+	</body>
+</html>

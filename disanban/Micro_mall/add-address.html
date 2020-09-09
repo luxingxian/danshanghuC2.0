@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>添加收货地址</title>
+		<link rel="stylesheet" type="text/css" href="css/LArea.css" />
+		<link rel="stylesheet" href="css/shop.css" />
+	</head>
+
+	<body style="font-size: 62.5%;">
+		<div class="content_box content_box_address">
+			<div class="l_container nav_bar">
+				<div class="l_content clearfix">
+					<div class="col-2 back">
+						<a href="place.html"><img src="images/back2.png" alt="" /></a>
+					</div>
+					<div class="col-8 title">
+						<h1>添加收货地址</h1></div>
+					<div class="col-2 icons">
+					</div>
+				</div>
+			</div>
+			<!------------nav_bared-->
+			<div class="l_container add_mess">
+				<div class="l_content">
+					<p class="clearfix"><span class="col-4">收货人:</span><input type="text" placeholder="姓名" class="col-8 name" /></p>
+					<p class="clearfix"><span class="col-4">联系电话:</span><input type="number" placeholder="填写手机号" class="col-8 phone" /></p>
+					<p class="clearfix area">
+						<span class="col-4">所属地区:</span>
+						<input type="text" id="demo1" readonly="" class="area-select col-8" value="" />
+						<input id="value1" type="hidden" value="20,234,504" />
+						<img src="images/sgt_icon.png" class="float-right icon_t" />
+					</p>
+					<p class="clearfix address">
+						<span class="col-4">详细地址:</span>
+						<input type="text" placeholder="街道、楼牌信息" class="add-detail" value="" />
+					</p>
+				</div>
+			</div>
+			<div class="l_container">
+				<div class="l_content">
+					<p class="btn_save">
+						<a href="select-address.html">保存</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--信息不完整提示-->
+		<p class="tip1">信息不完整</p>
+
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box1">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/LArea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/LAreaData1.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			var area1 = new LArea();
+			area1.init({
+				'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+				'valueTo': '#value1', //选择完毕后id属性输出到该位置
+				'keys': {
+					id: 'id',
+					name: 'name'
+				}, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+				'type': 1, //数据源类型
+				'data': LAreaData //数据源
+			});
+			area1.value = [1, 15, 3]; //控制初始位置，注意：该方法并不会影响到input的value
+
+			var input = document.getElementById('demo1');
+			input.addEventListener('focus', function() {
+				return false;
+			});
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var ok1 = false;
+				var ok2 = false;
+				var ok3 = false;
+				var ok4 = false;
+				$(".add_mess .name").keyup(function() {
+					if($(this).val() == "") {
+						ok1 = false;
+					} else {
+						ok1 = true;
+					}
+
+				})
+
+				$(".add_mess .phone").keyup(function() {
+					if(!(/^1(3|4|5|7|8)\d{9}$/.test($(this).val()))) {
+						ok2 = false;
+					} else {
+						ok2 = true;
+					}
+
+				})
+
+				$(".add_mess .add-detail").keyup(function() {
+					if($(this).val() == "") {
+						ok4 = false;
+					} else {
+						ok4 = true;
+					}
+
+				})
+				$(".btn_save").click(function() {
+					if($(".add_mess .area-select").val() == "") {
+						ok3 = false;
+					} else {
+						ok3 = true;
+					}
+
+					if(ok1 && ok2 && ok3 && ok4) {
+						$(this).children().attr("href", "select-address.html")
+					} else if(ok1 && ok3 && ok4 && ok2 == false) {
+						$(this).children().attr("href", "javascript:;");
+						$(".tip1").html("手机号码格式不正确")
+						$(".tip1").fadeIn().delay(1000).fadeOut()
+
+					} else {
+						$(this).children().attr("href", "javascript:;")
+						$(".tip1").fadeIn().delay(1000).fadeOut()
+					}
+				})
+			})
+		</script>
+
+	</body>
+
+</html>

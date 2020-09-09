@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>酒店列表</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" href="css/hotel_list.css"/>	
+		<script src="js/oder.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="nav_bar clear">
+			<div class="l_content">
+				<p>中州集团
+					<a href="javascript:;">
+						<img src="images/icon_minue.png" class="fr"/>
+					</a>
+				</p>
+			</div>
+		</div>
+		<!--头部-->	
+		
+		<div class="l_container sec1">
+			<div class="l_content">
+				<p class="select_city">选择城市&nbsp;&nbsp;&nbsp;&nbsp;<span>河南，&nbsp;郑州</span></p>
+				<a href="rili.html">
+				<div class="select_date clearfix">
+					<div class="aside fl">
+						<p class="text">入住</p>
+						<p class="l_date">
+							<span>周三</span>,<span>12月14日</span>
+							<img src="images/icon_gt9.png" alt="" class="icon_gt"/>
+						</p>
+					</div>
+					<div class="middle fl tc">
+						<p class="text"></p>
+						<p class="l_num"><span>1</span>晚</p>
+					</div>
+					<div class="aside fr">
+						<p class="text">离开</p>
+						<p class="l_date">
+							<span>周四</span>,<span>12月15日</span>
+							<img src="images/icon_gt9.png" alt="" class="icon_gt"/>
+						</p>
+						
+					</div>
+				</div>
+				</a>
+				<p class="selset_hotel">查询酒店</p>
+			</div>
+		</div>
+		
+		<div class="l_container sec2">
+			<a href="index.html">
+			<div class="l_content list">
+				<img data-original="images/pic1.png" alt="" />
+				<p class="com_star">
+					<img src="images/icon_star_w.png" alt="" />
+					<span><em>4.6</em>分</span>
+				</p>
+				<div class="hotel_name">
+					<h3>郑州中州假日酒店</h3>
+					<h5>￥<span>201.00</span> 起</h5>
+				</div>
+				<img data-original="images/drop.png" alt="" class="drop"/>
+			</div>
+			</a>
+			<a href="index.html">
+			<div class="l_content list">
+				<img data-original="images/pic1.png" alt="" />
+				<p class="com_star">
+					<img src="images/icon_star_w.png" alt="" />
+					<span><em>4.9</em>分</span>
+				</p>
+				<div class="hotel_name">
+					<h3>河南中州皇冠假日酒店</h3>
+					<h5>￥<span>201.00</span> 起</h5>
+				</div>
+				<img data-original="images/drop.png" alt="" class="drop"/>
+			</div>
+			</a>
+			<a href="index.html">
+			<div class="l_content list">
+				<img data-original="images/pic1.png" alt="" />
+				<p class="com_star">
+					<img src="images/icon_star_w.png" alt="" />
+					<span><em>3.6</em>分</span>
+				</p>
+				<div class="hotel_name">
+					<h3>郑州中州智选假日酒店</h3>
+					<h5>￥<span>201.00</span> 起</h5>
+				</div>
+				<img data-original="images/drop.png" alt="" class="drop"/>
+			</div>
+			</a>
+			<a href="index.html">
+			<div class="l_content list">
+				<img data-original="images/pic1.png" alt="" />
+				<p class="com_star">
+					<img src="images/icon_star_w.png" alt="" />
+					<span><em>2.5</em>分</span>
+				</p>
+				<div class="hotel_name">
+					<h3>河南郑州索菲特国际酒店</h3>
+					<h5>￥<span>201.00</span> 起</h5>
+				</div>
+				<img data-original="images/drop.png" alt="" class="drop"/>
+			</div>
+			</a>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--侧栏-->
+		<div class="s_mack"></div>
+		<div class="celan">
+			<div class="max_logo clear">
+				<p class="min_logo fl">
+					<img src="images/pic1.png"/>
+				</p>
+				<div class="logo_p fr">
+					<p class="logo_mniu">昵称昵称称称</p>
+					<p class="mniu_tet">183****7247</p>
+				</div>
+			</div>
+			<a href="Coupon.html">
+				<div class="youhui">
+					<p><i></i>优惠券</p>
+				</div>
+			</a>
+			<div class="youhui1">
+				<p><i class="icn_1"></i>经验值<span class="tpis">10分</span></p>
+			</div>
+			<a href="Room_order.html">
+				<div class="youhui1">				
+					<p><i class="icn_2"></i>客房订单<a href="javascript:;" class="s_oder"><em class="s_to">9</em><em class="s_em">&nbsp;+</em></a></p>				
+				</div>
+			</a>			
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.lazyload.min.js"></script>
+		<script>
+		 $(function() {
+		  $("img").lazyload();
+		  //加上淡出效果
+		  $("img").lazyload({ effect : "fadeIn" });
+		 });
+		</script>
+		
+		<script>
+			$(function(){
+				$('.nav_bar img').click(function(){
+					$('.celan').toggleClass('toggle_list');		
+					$('.s_mack').fadeIn();
+				});
+				$('.s_mack').click(function(){
+					$('.celan').removeClass('toggle_list');
+					$(this).fadeOut();
+				});				
+			})
+		</script>
+		<script>
+			$(function(){
+			var num=$('.youhui1 a .s_to').html();				
+				if(num>=99){
+				   $(this).find('.s_em').fadeIn();
+				   $('.youhui1 a').addClass('s_a');
+				}
+			});
+		</script>
+		
+	</body>
+</html>

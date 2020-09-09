@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>外部模块</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link href="css/list.css" type="text/css" rel="stylesheet" />
+		<script src="js/oder.js"></script>
+		<!--<script type="text/javascript">
+			//移动适配
+			var dw = document.documentElement.clientWidth;
+			document.documentElement.style.fontSize = dw / 750 *100+ 'px';
+			window.onresize = function() {
+				document.documentElement.style.fontSize = dw / 750 *100 + 'px';
+			}
+		</script>-->
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="nav_bar clearfix">
+			<div class="col-3">
+				<a href="index.html" class="back"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+			<div class="col-6 title">xx模块</div>
+			<div class="col-3 right"></div>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<!--头部-->
+		<iframe src="" id="iframepage" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
+		<!--<iframe src="http://m.v.qq.com/" id="iframepage" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>-->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			function frameresize() {
+				var winheight = $(window).height();
+				var qwe = $(".nav_bar").height();
+				var iframeheight = winheight - qwe;
+				$('#iframepage').css({
+					'height': iframeheight + 'px',
+					'margin-top': qwe + "px"
+				});
+			};
+
+			if(window.attachEvent) {
+				document.getElementById("iframepage").attachEvent('onload', frameresize);
+			} else {
+				document.getElementById("iframepage").addEventListener('load', frameresize, false);
+			}
+
+			$(window).resize(frameresize);
+			frameresize();
+		</script>
+	</body>
+
+</html>

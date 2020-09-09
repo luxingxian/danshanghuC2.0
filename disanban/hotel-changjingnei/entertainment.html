@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>娱乐</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link href="css/list.css" type="text/css" rel="stylesheet" />
+		<script src="js/oder.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="nav_bar clearfix">
+				<div class="col-3"><a href="index.html" class="back"><img src="images/back-arrow.png" alt="" /></a></div>
+				<div class="col-6 title">娱乐</div>
+				<div class="col-3 right"></div>  
+			</div>
+		<!--头部-->
+		<!--主体-->
+		<!--nav     ed-->
+		<div class="sub_nav">
+			<div class="sub_one">
+				<ul class="ul_one clearfix">
+					<li class="active all">全部分类</li>
+					<li>高温瑜伽</li>
+					<li>游泳</li>
+					<li>爵士舞</li>
+
+				</ul>
+				<a href="javascript:;" class="toggle_icon"><img src="images/icon_down3.png" alt="" /></a>
+			</div>
+			<ul class="ul_two clear">
+				<li>爵士舞</li>
+				<li>高温瑜伽</li>
+				<li>高温瑜伽</li>
+				<li>高温瑜伽</li>
+				<li>高温瑜伽</li>
+				<li>高温瑜伽</li>
+				<li>高温瑜伽</li>
+				<li>高温瑜伽</li>
+			</ul>
+		</div>
+		<!--sub_nav    ed-->
+		<div class="max_box">
+			<ul>
+				<li class="clear">
+					<a href="grogshop_list.html">
+						<div class="max_left fl">
+							<p>
+								<img src="images/mack_1.png" />
+							</p>
+						</div>
+					</a>
+					<div class="max_right fl">
+						<p class="max_p">高温瑜伽</p>
+						<p class="max_t"><em>&yen3000.00</em><span>&yen3000.00</span></p>
+					</div>
+				</li>
+				<li class="clear">
+					<a href="grogshop_list.html">
+						<div class="max_left fl">
+							<p>
+								<img src="images/mack_2.png" />
+							</p>
+						</div>
+					</a>
+					<div class="max_right fl">
+						<p class="max_p">高温瑜伽</p>
+						<p class="max_t"><em>&yen3000.00</em><span>&yen3000.00</span></p>
+					</div>
+				</li>
+				<li class="clear">
+					<a href="grogshop_list.html">
+						<div class="max_left fl">
+							<p>
+								<img src="images/mack_1.png" />
+							</p>
+						</div>
+					</a>
+					<div class="max_right fl">
+						<p class="max_p">高温瑜伽</p>
+						<p class="max_t"><em>&yen3000.00</em><span>&yen3000.00</span></p>
+					</div>
+				</li>
+				<li class="clear">
+					<a href="grogshop_list.html">
+						<div class="max_left fl">
+							<p>
+								<img src="images/mack_2.png" />
+							</p>
+						</div>
+					</a>
+					<div class="max_right fl">
+						<p class="max_p">高温瑜伽</p>
+						<p class="max_t"><em>&yen3000.00</em><span>&yen3000.00</span></p>
+					</div>
+				</li>
+				<li class="clear">
+					<a href="grogshop_list.html">
+						<div class="max_left fl">
+							<p>
+								<img src="images/mack_3.png" />
+							</p>
+						</div>
+					</a>
+					<div class="max_right fl">
+						<p class="max_p">高温瑜伽</p>
+						<p class="max_t"><em>&yen3000.00</em><span>&yen3000.00</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn"><a href="javascript:;">重新加载</a></p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+				//sub_nav展开收起效果
+				$(".toggle_icon").click(function() {
+						$(".ul_two").slideToggle();
+						if($(this).find("img").attr("src") == "images/icon_down3.png") {
+							$(this).find("img").attr("src", "images/icon_up3.png");
+						} else {
+							$(this).find("img").attr("src", "images/icon_down3.png")
+						}
+					})
+					//分类点击效果
+
+				$(".sub_nav li").click(function() {
+					$(".ul_two").slideUp();
+					if($(this).hasClass("active")) {
+						return;
+					}
+					if($(this).hasClass("all")) {
+						$(".sub_nav li").removeClass("active");
+						$(this).addClass("active")
+						return;
+					}
+					var str_li = $(this).html();
+					$(".ul_one li:first-child").after("<li>" + str_li + "</li>");
+					$(this).remove();
+					$(".ul_one li").removeClass("active");
+					$(".ul_one li:eq(1)").addClass("active");
+
+					sort();
+				})
+
+				function sort() {
+					var ul_width = $(".ul_one").width();
+					var lis_width = 0;
+					$(".ul_one li").each(function() {
+						var li_width = $(this).outerWidth();
+						lis_width += li_width;
+						if(lis_width > ul_width) {
+							var str = $(".ul_one li:last-child").html();
+							$(".ul_one li:last-child").remove();
+							$(".ul_two").prepend("<li>" + str + "</li>");
+						}
+					})
+
+				}
+				sort();
+			})
+		</script>
+	</body>
+
+</html>

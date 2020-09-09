@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link href="css/Restaurant.css" type="text/css" rel="stylesheet" />		
+			<script src="js/oder.js"></script>
+	</head>
+	<body style="background: #f1f1f1;">
+	<!--头部-->
+		<div class="top">
+			<p>
+				<a href="Room_order.html"><img src="images/m_icon_1.png"></a>餐饮订单
+			</p>			
+		</div>
+		<div class="top1">
+		<p>
+			<a href="shop.html"><img src="images/m_back2.png"></a>餐饮
+		</p>
+	</div>
+	<!--头部-->
+	<!--主体-->
+		<div class="min_box">
+			<p class="s_list">交易关闭（商家已取消）</p>
+			<div class="max_box">
+				<div class="s_kapian">
+					<div class="s_width">
+						<span class="s_height">餐桌预订</span>
+						<div class="s_con">
+							<p class="clear">
+								<span class="fl">用餐时间</span>
+								<em class="fl">2016-10-09   10 : 00</em>
+							</p>
+							<p class="clear">
+								<span class="fl">用餐人数</span>
+								<em class="fl"> 4人 &nbsp;&nbsp;订桌类型&nbsp;&nbsp;仅包间</em>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="s_cotent">
+					<p>餐桌详情</p>
+					<div class="s_text">						
+						<ul>
+							<li class="clear">
+								<span class="fl">用餐人姓名</span>
+								<span class="fl">罗伯茨</span>
+							</li>
+							<li class="clear">
+								<span class="fl">用餐人手机号</span>
+								<span class="fl">18690259628</span>
+							</li>
+							<li class="clear">
+								<span class="fl">备注留言</span>
+								<span class="fl">无</span>
+							</li>
+						</ul>
+					</div>					
+				</div>
+				<div class="s_cotent1">
+					<p>订单信息</p>
+					<div class="s_text">						
+						<ul>
+							<li class="clear">
+								<span class="fl">订单编号</span>
+								<span class="fl">010116080400045</span>
+							</li>
+							<li class="clear">
+								<span class="fl">提交时间</span>
+								<span class="fl">016-07-21   14:08:12</span>
+							</li>
+							<li class="clear">
+								<div class="center clear">
+									<p class="clear"><i class="fl"></i><em class="fl">联系酒店</em></p>
+								</div>
+							</li>
+						</ul>
+					</div>					
+				</div>
+				<p class="text_center"></p>				
+			</div>
+			<div class="text_min">
+				<a href="javascript:;" class="text_max fr">再次预订</a>	
+				<a href="javascript:;" class="text_max1 fr s_img">删除订单</a>	
+			</div>
+		</div>		
+		<!--删除取消弹框-->
+		<div class="tan1">
+			<div class="s_tan">
+				<p class="tan_p">确定要删除订单吗？</p>	
+				<div class="mian_btn clear">
+					<a href="javascript:;" class="s_out fl">取消</a>
+					<a href="javascript:;" class="s_in fl">确定</a>
+				</div>
+			</div>	
+		</div>
+		<!--取消成功-->				
+		<p class="s_quxiao1">删除订单成功</p>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn"><a href="javascript:;">重新加载</a></p>
+			</div>
+		</div>
+		
+	
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function(){				
+				if($('.max_box').children().hasClass('.text_center')){
+					alert('111')
+					$(this).css('margin-bottom',0)
+				}else{
+					$(this).css('margin-bottom','10%')
+				}
+			});
+		</script> 
+		<script>
+			$(function(){
+				$('.s_img').click(function(){
+					$('.tan1').fadeIn();	
+				});
+				$('.s_out').click(function(){
+					$('.tan1').fadeOut();
+				});
+				$('.tan1').click(function(){
+					$(this).fadeOut();
+				});
+				$('.s_in').click(function(){
+					$('.tan1').fadeOut();
+					$('.s_quxiao1').fadeIn();
+					setTimeout(function(){ tab() }, 2000)
+				});
+				
+			})
+			
+			function tab(){
+				$('.s_quxiao1').fadeOut();
+			};			
+		</script>
+	</body>
+</html>

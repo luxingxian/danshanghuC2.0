@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>餐桌预订</title>
+		<link rel="stylesheet" type="text/css" href="css/table-reservation.css" />
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--<a href="" class="tab_user"><img src="images/icon_user1.png" alt="" /></a>-->
+		<div class="table_reservation">
+			<div class="l_container nav_bar">
+				<div class="l_content clearfix">
+					<div class="col-4 back"><a href="index.html"><img src="images/m_icon_back.png" alt="" /></a></div>
+					<div class="col-4 title"><h1>餐桌预订</h1></div>
+					<div class="col-4 icons">
+						<a href="javascript:;">
+							<img src="images/m_icon_user.png" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="l_container nav_bar1">
+				<div class="l_content clearfix">
+					<div class="col-4 back"><a href="index.html"><img src="images/m_back2.png" alt="" /></a></div>
+					<div class="col-4 title"><h1>餐桌预订</h1></div>
+					<div class="col-4 icons">
+						<a href="javascript:;">
+							<img src="images/m_icon_user.png" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<!------------nav_bared-->
+			<div class="l_container tab_section1">
+				<div class="l_content">
+					<div class="peaple_num">
+						<p>人数<span class="num_table">4</span>人</p>
+						<p><img src="images/m_icon_down.png" alt="" /></p>
+					</div>
+					<div class="table_date">
+						<a href="calendar.html"><p class="first">2016-10-09<span class="today">今天</span><img src="images/m_icon_6.png" alt="" /></p></a>
+						<p class="tab_date_box"><span class="num_date">12:00</span><img src="images/m_icon_6.png" alt="" /></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="l_container tab_section2  tab_toggle">
+				<div class="l_content">
+					<p>包间&nbsp;(<span class="num_busness">10</span>人起订)
+						<span class="switch_but switch_but2">
+							<input type="checkbox" name="toggle" class="togg">
+							<label for="toggle"><i></i></label>
+						</span>
+						
+					</p>
+				</div>
+			</div>
+
+			<div class="l_container tab_section3">
+				<div class="l_content">
+					<p>包间消费政策</p>
+					<p>包间消费政包间消费政包间消费政包间消费政包间消政包间消费政包间消费政包政包间消费间消费政包间消费政包间消费政。</p>
+					<p class="select">如果订不到包房，可接受大厅
+						<i class="radio"></em></i>
+						<!--<input type="checkbox" class="tab_check" id="tab_check" /><label for="tab_check"><i></i></label>-->
+					</p>
+				</div>
+			</div>
+
+			<div class="l_container tab_section4 tab_mess">
+				<div class="l_content clearfix">
+					<p class="tab_left">姓名</p>
+					<p class="tab_right"><input type="text" placeholder="请输入您的姓名" value="" class="tab_name tab_input" /></p>
+					<p class="tab_left  tab_radio"></p>
+					<p class="tab_right tab_radio tab_radio1">
+						<span >
+							<input type="radio" value="先生" id="radio1" name="radio_fir" checked="checked"/><label for="radio1"></label>先生
+							<input type="radio" value="女士" id="radio2" name="radio_fir"/><label for="radio2" class="woman"></label>女士							
+						</span>
+					</p>
+					<p class="tab_left">手机号</p>
+					<p class="tab_right"><input type="text" placeholder="请输入您的手机号" value="" class="tab_phone tab_input" /></p>
+				</div>
+			</div>
+
+			<div class="l_container tab_section4">
+				<div class="l_content clearfix">
+					<p class="tab_left">备注留言</p>
+					<p class="tab_right"><input type="text" placeholder="可填写附加要求，我们会尽量安排" value="" class="tab_text tab_input" maxlength='20'/></p>
+				</div>
+			</div>
+
+			<div class="l_container tab_section2 tab_toggle2">
+				<div class="l_content">					
+					<p>
+						<span>帮他人预订</span>
+						<span class="switch_but switch_but2">
+							<i class="radio1"></i>
+						</span>
+					</p>
+				</div>
+			</div>
+
+			<div class="l_container tab_section4 tab_mess2">
+				<div class="l_content clearfix">
+					<p class="tab_left">待订人姓名</p>
+					<p class="tab_right"><input type="text" placeholder="请输入用餐人姓名" value="" class="tab_name tab_input" /></p>
+					<p class="tab_left  tab_radio"></p>
+					<p class="tab_right tab_radio tab_radio1">
+						<span >
+							<input type="radio" value="先生" id="radio3" name="radio_sec" checked="checked"/><label for="radio3"></label>先生
+							<input type="radio" value="女士" id="radio4" name="radio_sec"/><label for="radio4" class="woman"></label>女士
+						</span>
+					</p>
+					<p class="tab_left">待订人手机号</p>
+					<p class="tab_right"><input type="text" placeholder="请输入用餐人手机号" value="" class="tab_phone tab_input" /></p>
+				</div>
+			</div>
+			<div class="l_container tab_foot_btn">
+				<a href="javascript:;">立即订桌</a>
+			</div>
+		</div>
+		<div class="drop"></div>
+		<!--人数选择弹窗-->
+			<div class="peaple_num_box num_p">
+				<div class="l_container tab_title">
+					<p>选择就餐人数</p>
+				</div>
+				<div class="l_container num_box">
+					<div class="num_box_in">
+						<img src="images/m_icon_down.png" alt="" class="down_tip"/>
+						<p>1</p>
+						<p>2</p>
+						<p>3</p>
+						<p>4</p>
+						<p>5</p>
+						<p>6</p>
+						<p>7</p>
+						<p>8</p>
+						<p>9</p>
+						<p>10</p>
+						<p>11</p>
+						<p>12</p>
+						<p>13</p>
+						<p>14</p>
+						<p>15</p>
+						<p>16</p>
+						<p>17</p>
+						<p>18</p>
+						<p>19</p>
+						<p>20</p>
+						<p>21</p>
+						<p>22</p>
+						<p>23</p>
+						<p>24</p>
+						<p>25</p>
+						<p>26</p>
+						<p>27</p>
+						<p>28</p>
+						<p>29</p>
+						<p>30</p>
+						<p>31</p>
+						<p>32</p>
+						<p>33</p>
+						<p>34</p>
+						<p>35</p>
+						<p>36</p>
+						<p>37</p>
+						<p>38</p>
+						<p>39</p>
+						<p>40</p>
+						<p>41</p>
+						<p>42</p>
+						<p>43</p>
+						<p>44</p>
+						<p>45</p>
+						<p>46</p>
+						<p>47</p>
+						<p>48</p>
+						<p>49</p>
+						<p>50</p>
+					</div>
+				</div>
+			</div>
+
+		<!--时间选择弹窗-->	
+			<div class="time_box">
+				<div class="time_title clearfix">
+					<p class="title_wushi">午市</p>
+					<p class="title_wanshi">晚市</p>
+				</div>
+				<div class="time_nums time_wushi clearfix">
+					<p>08:00</p>
+					<p>08:30</p>
+					<p>09:00</p>
+					<p>09:30</p>
+					<p>10:00</p>
+					<p>10:30</p>
+					<p>11:00</p>
+					<p>11:30</p>
+					<p>12:00</p>
+					<p>12:30</p>
+					<p>13:00</p>
+					<p>13:30</p>
+					<p>14:00</p>
+					<p>14:30</p>
+					<p>15:00</p>
+					<p>15:30</p>
+				</div>
+				<div class="time_nums time_wanshi clearfix">
+					<p>16:00</p>
+					<p>16:30</p>
+					<p>17:00</p>
+					<p>17:30</p>
+					<p>18:00</p>
+					<p>18:30</p>
+					<p>19:00</p>
+					<p>19:30</p>
+					<p>20:00</p>
+					<p>20:30</p>
+					<p>21:00</p>
+					<p>21:30</p>
+					<p>22:00</p>
+					<p>22:30</p>
+					<p>23:00</p>
+					<p>23:30</p>
+					<p>24:00</p>
+				</div>
+			</div>
+		<!--返回提示弹窗-->
+		<div class="can_tan can_back">
+			<div class="tan_box">				
+				<p>订单尚未填写完成</br>确定要离开当前页面？</p>
+				<p class="btns clearfix">
+					<a href="javascript:;" class="cancle">取消</a>
+					<a href="index.html" class="ok">确定</a>
+				</p>
+			</div>
+		</div>
+
+		<!--提交订单失败提示弹窗-->
+		<div class="s_tan">
+			<div class="tan_min">
+				<p>
+					<img src="images/m_false.png"/>
+				</p>
+				<span>订单提交失败，请重新提交</span>
+				<div class="s_button">
+					<a href="javascript:;" class="s_btn1">保存订单</a>
+				</div>
+			</div>
+		</div>
+		<!--提交订单成功-->
+		<div class="s_tan1">
+			<div class="tan_min">
+				<p>
+					<img src="images/m_ture.png"/>
+				</p>
+				<span>订单提交失败，请重新提交</span>
+				<div class="s_button">
+					<a href="javascript:;" class="s_btn1">查看订单</a>
+					<a href="javascript:;" class="s_btn2">继续预订</a>
+				</div>
+			</div>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+	
+			
+		<!--弹窗效果-->
+		<script type="text/javascript">
+			$(function(){
+				$(".back").click(function() {
+					$(".can_back").fadeIn();
+				})
+				$(".cancle,.icon_close").click(function() {
+					$(".can_back").fadeOut();
+				})
+			})
+		</script>
+		
+		<!--时间弹窗及选择效果-->
+		<script type="text/javascript">
+			$(function() {
+				var d = new Date();
+				var hour = d.getHours();
+				var minute = parseInt(d.getMinutes());
+				var time_now = hour + ':' + minute;
+				var num_date;
+				//	默认时间选择
+				if(time_now < "12:00") {
+					$(".num_date").html("12:00");
+				} else {
+					$(".num_date").html("18:30");
+					
+				}
+				num_date = $(".num_date").html();
+				//根据本地时间显示可选时间段
+				$(".time_wushi p").each(function() {
+					if($(this).html() < time_now) {
+						$(this).hide();
+						$(this).next().hide();
+					};
+					if($(this).html() == num_date) {
+						$(this).addClass("active")
+					}
+
+				})
+				
+				$(".time_wanshi p").each(function() {
+					if($(this).html() < time_now) {
+						$(this).hide();
+						$(this).next().hide();
+					};
+					if($(this).html() == num_date) {
+						$(this).addClass("active")
+					}
+
+				})
+				
+				//弹窗打开时根据本地时间显示午市或夜市时间
+				if(time_now<"15:30"){
+					$(".time_title p.title_wushi").show();
+					$(".time_title p").css({"width":"50%"});
+					$(".time_title p").removeClass("active");
+					$(".title_wushi").addClass("active");
+					$(".time_wushi").show();
+				}else{
+					$(".time_title p.title_wushi").hide();
+					$(".time_title p.title_wanshi").css({"width":"100%"});
+					$(".time_title p.title_wanshi").addClass("active");
+					$(".time_wanshi").show();
+				}
+				//午市、晚市点击切换效果
+				$(".time_title p.title_wushi").click(function(){
+					$(".time_nums").hide();
+					$(".time_nums.time_wushi").show();
+					$(".time_title p").removeClass("active");
+					$(this).addClass("active");
+				})
+				$(".time_title p.title_wanshi").click(function(){
+					$(".time_nums").hide();
+					$(".time_nums.time_wanshi").show();
+					$(".time_title p").removeClass("active");
+					$(this).addClass("active");
+				})
+				
+				//不是今天日期所有时间段都显示并默认显示午市时间
+			
+				if($(".today").html() != "今天") {
+					$(".time_nums p").show();
+					$(".time_title p").show();
+					$(".time_title p").css({"width":"50%"});
+					$(".time_title p").removeClass("active");
+					$(".title_wushi").addClass("active");
+					$(".time_wushi").show();
+					$(".time_wanshi").hide();
+					$(".time_nums p").removeClass("active")
+				}
+			
+				
+				//晚市超过23:30分，无可选时间的状态
+				if(time_now > "23:30"){
+					$(".time_wanshi").html("<p class='tip_late'>太晚了，洗洗睡吧~</p>");
+					
+				}
+
+				
+				//时间选择区域点击弹窗及遮罩出现，body禁止滑动
+				$(".tab_date_box").click(function(){
+					$(".time_box").fadeIn();
+					$(".drop").fadeIn()
+					$("body").css({
+							"position": "fixed",
+							"top": "0",
+							"bottom": "0",
+							"left": "0",
+							"width": "100%"
+					})
+				})
+
+				//时间点击后关闭弹窗、遮罩，并把选择到的时间赋值给页面时间区域
+				$(".time_nums p").click(function(){
+					$(".time_nums p").removeClass("active");
+					$(this).addClass("active");
+					$(".num_date").html($(this).html());
+					$(".time_box").fadeOut();
+					$(".drop").fadeOut();
+					$("body").removeAttr("style");
+				})
+				//点击遮罩关闭弹窗和遮罩，body可滑动
+				$(".drop").click(function(){
+					$(".time_box").fadeOut();
+					$(this).fadeOut();
+					$("body").removeAttr("style");
+				})
+
+			})
+		</script>
+
+		<!--toggle点选及关联项显示隐藏效果-->
+		<script type="text/javascript">
+			$(function() {
+				$('.tab_toggle .switch_but input').click(function(e){
+					if($(this).parent().hasClass("switch_but1")){
+						$(this).parent().removeClass("switch_but1");
+						$(this).parent().addClass("switch_but2");
+						$(".tab_section3").slideUp();
+					} else {
+						$(this).parent().removeClass("switch_but2");
+						$(this).parent().addClass("switch_but1");
+						$(".tab_section3").slideDown();
+					}
+
+				});
+//
+//				$('.tab_toggle2 .switch_but input').click(function(e) {
+//					if($(this).parent().hasClass("switch_but1")) {
+//						$(this).parent().removeClass("switch_but1");
+//						$(this).parent().addClass("switch_but2");
+//						$(".tab_mess2").slideUp();
+//
+//					} else {
+//						$(this).parent().removeClass("switch_but2");
+//						$(this).parent().addClass("switch_but1");
+//						$(".tab_mess2").slideDown();
+//
+//						yanzheng_tab_mess();
+//						yanzheng_tab_mess2();
+//					}
+//
+//				});
+
+				$(function(){
+					$('.radio1').click(function(){
+						$(this).toggleClass('s_on1');
+						if($(this).hasClass('s_on1')){
+							$(".tab_mess2").slideDown();
+							yanzheng_tab_mess();
+							yanzheng_tab_mess2();
+						}else{
+							$(".tab_mess2").slideUp();						
+						}
+					})
+				});
+
+				if($(".tab_toggle2 span.switch_but").hasClass("switch_but2")){
+					yanzheng_tab_mess()
+				}
+				//输入框信息验证
+				function yanzheng_tab_mess(){
+					$(".tab_foot_btn a").click(function(){
+						if($(".tab_mess .tab_name").val() == "" || $(".tab_mess .tab_name").val() == "请输入您的姓名") {
+							$(".tab_mess .tab_name").val("请输入您的姓名");
+							$(".tab_mess .tab_name").css("color", "#f33");
+						}
+						if($(".tab_mess .tab_phone").val() == "" || $(".tab_mess .tab_phone").val() == "请输入您的手机号") {
+							$(".tab_mess .tab_phone").val("请输入您的手机号");
+							$(".tab_mess .tab_phone").css("color", "#f33");
+						} else {
+							var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|18[0-9]|14[57]|17[0-9])[0-9]{8}$/;
+							if(!reg.test($(".tab_mess .tab_phone").val())) {
+								$(".tab_mess .tab_phone").val("请输入正确格式");
+								$(".tab_mess .tab_phone").css("color", "#f33");
+								return false;
+							}
+						}
+
+						$(".tab_mess .tab_name").focus(function(){
+							if($(this).val() == "请输入您的姓名") {
+								$(this).val("");
+								$(this).css('color', '#333');
+							} else {
+								return;
+							}
+						})
+						$(".tab_mess .tab_phone").focus(function(){
+							if($(this).val() == "请输入您的手机号" || $(this).val() == "请输入正确格式") {
+								$(this).val("");
+								$(this).css('color', '#333');
+							} else {
+								return;
+							}
+						})
+					})
+				}
+				//帮他人代订输入框信息验证
+				function yanzheng_tab_mess2() {
+					$(".tab_foot_btn a").click(function(){
+						if($(".tab_mess2 .tab_name").val() == "" || $(".tab_mess2 .tab_name").val() == "请输入用餐人姓名") {
+							$(".tab_mess2 .tab_name").val("请输入用餐人姓名");
+							$(".tab_mess2 .tab_name").css("color", "#f33");
+						}
+						if($(".tab_mess2 .tab_phone").val() == "" || $(".tab_mess2 .tab_phone").val() == "请输入用餐人手机号") {
+							$(".tab_mess2 .tab_phone").val("请输入用餐人手机号");
+							$(".tab_mess2 .tab_phone").css("color", "#f33");
+						} else {
+							var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|18[0-9]|14[57]|17[0-9])[0-9]{8}$/;
+							if(!reg.test($(".tab_mess2 .tab_phone").val())) {
+								$(".tab_mess2 .tab_phone").val("请输入正确格式");
+								$(".tab_mess2 .tab_phone").css("color", "#f33");
+								return false;
+							}
+						}
+
+						$(".tab_mess2 .tab_name").focus(function(){
+							if($(this).val() == "请输入用餐人姓名") {
+								$(this).val("");
+								$(this).css('color', '#333');
+							} else {
+								return;
+							}
+						})
+						$(".tab_mess2 .tab_phone").focus(function(){
+							if($(this).val() == "请输入用餐人手机号" || $(this).val() == "请输入正确格式") {
+								$(this).val("");
+								$(this).css('color', '#333');
+							} else {
+								return;
+							}
+						})
+					})
+				}
+
+			});
+		</script>
+		<!--人数选择/人数判断效果-->
+		<script type="text/javascript">
+			$(function() {
+				
+				
+				//向下箭头上翻显示、下划隐藏
+				var st=$(".num_box_in").scrollTop();
+				var st2;
+				$(".num_box_in").scroll(function(){
+					st2=$(".num_box_in").scrollTop();
+					
+					if(st2>st){
+						$(".down_tip").fadeOut()
+					}else{
+						$(".down_tip").fadeIn()
+					}
+					st=st2
+				})
+				
+				
+				//选择人数后弹窗及遮罩隐藏,被选中人数样式更改，人数校验
+				var num = 4;
+				$(".num_p .num_box p").click(function() {
+						$(".num_p .num_box p").removeClass("active");
+						$(this).addClass("active");
+						num = $(this).html();
+						$(".num_table").html(num);
+						$(".num_p").fadeOut();
+						$(".drop").fadeOut();
+						$("body").removeAttr("style")
+						check_num();//选择人数后验证人数
+						st2=0;						
+					})
+				
+				$(".drop").click(function(){
+					$(".num_p").fadeOut();
+					$(this).fadeOut();
+					$("body").removeAttr("style");
+				})
+					//默认选中的样式
+				var tab_num = $(".num_table").html();
+				$(".num_p .num_box p").each(function() {
+					if($(this).html() == tab_num) {
+						$(this).addClass("active");
+					}
+				})
+				//人数选择区域点击弹框及遮罩出现
+				$(".peaple_num").click(function() {
+					$(".num_p").fadeIn();
+					$(".drop").fadeIn();
+					$(".down_tip").fadeIn()
+					$("body").css({
+							"position": "fixed",
+							"top": "0",
+							"bottom": "0",
+							"left": "0",
+							"width": "100%"
+					});
+				})
+				//选择人数与商家设置人数对比
+				function check_num() {
+					var num_busness = parseInt($(".num_busness").html());
+					var num_table = parseInt($(".num_table").html());
+					if(num_table < num_busness) {
+						$(".tab_toggle input").attr("disabled", "");
+						$(".tab_toggle .switch_but").addClass("switch_but2");
+						$(".tab_section3").slideUp();
+						$(".select input").removeAttr("checked");
+					} else {
+						$(".tab_toggle input").removeAttr("disabled");
+					}
+				}
+				check_num();
+				//toggle点击关联区域显示隐藏
+				function radio_slide(){
+					if($(".tab_toggle .switch_but,.tab_toggle2 .switch_but").hasClass("switch_but1")) {
+						$(".tab_section3,.tab_mess2").slideDown();
+					}
+					if($(".tab_toggle .switch_but,.tab_toggle2 .switch_but").hasClass("switch_but2")) {
+						$(".tab_section3,.tab_mess2").slideUp();
+					}
+				}
+				radio_slide();
+
+			})
+		</script>
+		<script>
+			$(function(){
+				$('.radio').click(function(){
+				 	$(this).toggleClass('s_on')	
+				})
+				
+				$('.radio1').click(function(){
+				 	$(this).toggleClass('s_on')	
+				})
+			})
+		</script>
+		<script>
+			
+		</script>
+	</body>
+
+</html>

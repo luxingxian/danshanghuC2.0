@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>中州假日酒店-酒店相册</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/lu.css"/>
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="hotel_photo">
+			<p class="nav">
+				<a href="index.html" class="back_icon"><img src="images/icon_back.png" alt="" /></a>
+				酒店相册
+			</p>
+			<!--nav    ed-->
+			<div class="l_container">
+				<div class="l_content">
+					<ul class="tab_photo clearfix">
+						<li class="active first">外观</li>
+						<li class="middle">内景</li>
+						<li class="last">客房</li>
+					</ul>
+					<div class="photos">
+						<ul class="pics clearfix">
+							<li><img src="images/pic1.png" alt="" /></li>
+							<li><img src="images/pic3.png" alt="" /></li>
+							<li><img src="images/pic3.png" alt="" /></li>
+							<li><img src="images/pic1.png" alt="" /></li>
+							<li><img src="images/pic1.png" alt="" /></li>
+							<li><img src="images/pic2.png" alt="" /></li>
+							<li><img src="images/pic1.png" alt="" /></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="pic_box"></div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/pic3.png"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/bnner_2.jpg"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/bnner_3.jpg"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/pic3.png"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/bnner_2.jpg"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="images/bnner_3.jpg"/>
+				</div>
+			</div>
+			<p class="page"><em class="di">1</em> / <em class="gong"></em></p>
+		</div>
+		
+
+		
+		
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".swiper-container").hide();
+				var imgs=$(".photos .pics li").length;
+				$(".gong").html(imgs);
+				$(".photos .pics li").click(function(){
+					$(".pic_box").fadeIn();
+					$(".swiper-container").fadeIn();
+					
+				})
+				$(".pic_box").click(function(){
+					$(this).fadeOut();
+					$(".swiper-container").fadeOut();
+					
+				})
+			})
+		</script>
+		<script>        
+			  var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				paginationClickable: true,
+			
+			});
+			
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$(".tab_photo li").click(function(){
+					$(".tab_photo li").removeClass("active");
+					$(this).addClass("active");
+				})
+			})
+		</script>
+	</body>
+</html>

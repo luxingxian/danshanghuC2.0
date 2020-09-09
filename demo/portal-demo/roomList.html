@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>客房</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" href="css/guest_room.css"/>
+		<link rel="stylesheet" type="text/css" href="css/l_tell_pop.css"/>
+		<script src="js/oder.js"></script>
+	</head>
+	<body>	
+		<div class="s_mian">
+			<div class="navBar">
+				<p class="navName"><span>客房</span></p>
+				<a href="index.html" class="backArrow"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+			<!--nav     ed-->
+			<!--主体-->
+			<div class="content">
+				<div class="s_content">
+					<div class="s_time">
+						<a href="room_detail.html">
+							<div class="itime">
+								<p class="s_img">
+									<img data-original="images/l_xingzheng.jpg" />	
+								</p>
+								<p class="s_shadow">
+									<span>&yen;3574.00 </span>
+								</p>
+							</div>
+						</a>
+						<div class="s_butoon clear">
+							<a href="room_detail.html">
+								<div class="s_btnl fl">
+									<p class="s_tp">行政客房</p>
+									<p class="s_tp1">59㎡   大床  3份早餐</p>
+								</div>
+							</a>
+							<p class="s_btn_r fr mian_btn">
+								<a href="javascript:;">联系酒店</a>
+							</p>
+						</div>
+					</div>	
+					
+					<div class="s_time">
+						<a href="room_detail.html">
+							<div class="itime">
+								<p class="s_img">
+									<img data-original="images/l_xingzheng.jpg" />	
+								</p>
+								<p class="s_shadow">
+									<span>&yen;4781.00 </span>
+								</p>
+							</div>
+						</a>
+						<div class="s_butoon clear">
+							<a href="room_detail.html">
+								<div class="s_btnl fl">
+									<p class="s_tp">皇家套房</p>
+									<p class="s_tp1">730㎡   其他  9份早餐</p>
+								</div>
+							</a>
+							<p class="s_btn_r fr mian_btn">
+								<a href="javascript:;">联系酒店</a>
+							</p>
+						</div>
+					</div>	
+					<div class="s_time">
+						<a href="room_detail.html">
+							<div class="itime">
+								<p class="s_img">
+									<img data-original="images/l_xingzheng.jpg" />	
+								</p>
+								<p class="s_shadow">
+									<span>&yen;2624.00 </span>
+								</p>
+							</div>
+						</a>
+						<div class="s_butoon clear">
+							<a href="room_detail.html">
+								<div class="s_btnl fl">
+									<p class="s_tp">尊贵客房</p>
+									<p class="s_tp1">46㎡   双人床  3份早餐</p>
+								</div>
+							</a>
+							<p class="s_btn_r fr mian_btn">
+								<a href="javascript:;">联系酒店</a>
+							</p>
+						</div>
+					</div>	
+					<div class="s_time">
+						<a href="room_detail.html">
+							<div class="itime">
+								<p class="s_img">
+									<img data-original="images/l_xingzheng.jpg" />	
+								</p>
+								<p class="s_shadow">
+									<span>&yen;2449.00 </span>
+								</p>
+							</div>
+						</a>
+						<div class="s_butoon clear">
+							<a href="room_detail.html">
+								<div class="s_btnl fl">
+									<p class="s_tp">豪华客房</p>
+									<p class="s_tp1">46㎡   双人床  3份早餐</p>
+								</div>
+							</a>
+							<p class="s_btn_r fr mian_btn">
+								<a href="javascript:;">联系酒店</a>
+							</p>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<!--主体-->
+		</div>
+		<!------电话拨打提醒---弹窗-->
+		<div class="tan_drop bg_tell">
+			<div class="tan_box">
+				<p class="text">拨打电话 <span>400071800</span></p>
+				<p class="room_btn"><a href="javascript:;" class="cancle">取消</a><a href="javascript:;" class="ok">确定</a></p>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.lazyload.min.js"></script>
+		<script>
+		 $(function() {
+		  $("img").lazyload();
+		  //加上淡出效果
+		  $("img").lazyload({ effect : "fadeIn" });
+		 });
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$(".mian_btn").click(function(){
+					$(".bg_tell").fadeIn();
+				})
+				$(".bg_tell .cancle").click(function(){
+					$(".bg_tell").fadeOut();
+				})
+			})
+		</script>
+	</body>
+</html>

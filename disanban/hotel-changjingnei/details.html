@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>客房-商品详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" href="css/list.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+	</head>
+
+	<body>
+		<!--轮播开始-->
+		<div class="min_content">
+			<div class="w_mian" style="margin-top: 0;">
+				<ul class="clearfix">
+					<li class="w_hleft">
+						<div id="slideBox" class="slideBox">
+							<div class="bd">
+								<ul>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/bnner_1.png" /></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/bnner_2.jpg"></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/bnner_3.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="hd">
+								<ul>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<p class="min_img">
+					<a href="guest_room.html"><img src="images/icon_back_drop.png" /></a>
+				</p>
+				<p class="s_xie">
+					<a href="tel:12334343">联系酒店</a>
+				</p>
+				<div class="s_poition">
+				</div>
+			</div>
+			<div class="min_text clear">
+				<div class="text_div fl">
+					<p class="frist">&yen;3800.00</p>
+					<p class="last">高级特惠标准套房</p>
+				</div>
+			</div>
+			<div class="s_grop clear">
+				<span class="s_span fl">房间面积 : </span>
+				<div class="fl clear">
+					<span class="fl">12-16㎡</span>
+					<span class="fl">可住20人</span>
+					<span class="fl">不含早餐</span>
+				</div>
+			</div>
+			<div class="s_grop clear">
+				<span class="s_span fl">房间设施 : </span>
+				<div class="fl clear">
+					<span>床型</span>
+					<span>大床2.0米</span>
+					<p class="clear z_bed">
+						<span class="fl">能否加床:</span>
+						<span class="fl">不能</span>
+						<span class="fl z_can">能(66元/床/晚上，需到前台支付)</span>
+					</p>
+				</div>
+			</div>
+			<div class="sheshi">
+				<ul class="clear">
+					<li class="fl clear">
+						<p class="fl img_1">
+							<img src="images/icon_h1.png" />
+						</p>
+						<p class="list_text2 fl">吹风机</p>
+					</li>
+					<li class="fl clear">
+						<p class="s_left fl img_2">
+							<img src="images/icon_h2.png" />
+						</p>
+						<p class="list_text2 fl">洗发露</p>
+					</li>
+					<li class="fl clear">
+						<p class="fl img_4">
+							<img src="images/icon_h4.png" />
+						</p>
+						<p class="list_text2 fl">洗发露</p>
+					</li>
+					<li class="s_right fl clear">
+						<p class="fl img_3">
+							<img src="images/icon_h3.png" />
+						</p>
+						<p class="list_text2 fl">浴巾</p>
+					</li>
+				</ul>
+				<p class="s_number">更多....</p>
+			</div>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn"><a href="javascript:;">重新加载</a></p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/oder.js"></script>
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript">
+			function isShow() {
+				var LiHeight = $(".sheshi ul li").height();
+				var UlHeight = $(".sheshi ul").height();
+				$(".sheshi").height(LiHeight);
+				if(LiHeight < UlHeight) {
+					$(".s_number").show();
+				}
+				$(".sheshi").click(function() {
+					$(".sheshi").animate({
+						"height": UlHeight
+					}, 400);
+					$(".s_number").fadeOut(200);
+				})
+			}
+			isShow();
+		</script>
+		<!--轮播js-->
+		<script type="text/javascript">
+			TouchSlide({
+				slideCell: "#slideBox",
+				titCell: ".hd ul", //开启自动分页 autoPage:true，此时设置 titCell 为导航元素包裹层
+				mainCell: ".bd ul",
+				effect: "leftLoop",
+				autoPage: true, //自动分页
+				autoPlay: true //自动播放
+			});
+		</script>
+		<!--<script>
+			$(function(){
+				var aH=$('.sheshi').height();
+				$('.sheshi').click(function(){
+					if($(this).height()==aH){
+						var Height=$('.sheshi ul').height();
+						$(this).animate({ height:Height},"normal")
+						$('.s_number').fadeOut();
+					}
+				})
+			});
+			$(function(){
+				var aLi=$('.sheshi ul li').length;	
+				if(aLi<=3){
+					$('.s_number').hide();	
+				}else{
+					$('.s_number').show();
+				}
+			});
+		</script>	-->
+	</body>
+
+</html>

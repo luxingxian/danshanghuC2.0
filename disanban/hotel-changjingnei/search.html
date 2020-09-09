@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>西餐-搜索页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" href="css/list.css"/>	
+	</head>
+	<body style="background:#f5f5f5;">
+		<!--头部-->
+		<div class="nav_bar">
+			<div class="nav_two clear">
+				<p class="nav_1 fl">
+					<a href="index_canyin.html">
+						<img src="images/back-arrow.png"/>
+					</a>
+				</p>
+				<p class="nav_2 fl">西餐</p>
+				<p class="nav_3 fr">
+					<a href="personal Center.html">
+						<img src="images/s_icon.png"class="fr"/>
+					</a>
+				</p>
+			</div>
+		</div>
+		<!--头部-->
+		<!--主体-->
+		<div class="s_head">
+			<div class="s_head_two">
+				<div class="head_bar clear">
+					<div class="s_bar fl">
+						<span class="bar_img fl"></span>
+						<input type="text" class="s_inp fl"/>
+						<span class="bar_text fl"></span>							
+					</div>
+					<a href="search_result_can.html"><p class="bar_tet fl">搜索</p></a>
+				</div>				
+			</div>			
+		</div>
+		<div class="s_mian">
+			<div class="s_min">				
+				<p class="min_p">热门搜索</p>
+				<ul class="clear">
+					<a href="search_result_can.html"><li class="fl">烟酒</li></a>
+					<a href="search_result_can.html"><li class="fl">特色产品</li></a>
+					<a href="search_result_can.html"><li class="fl">烟酒</li></a>
+					<a href="search_result_can.html"><li class="fl">特色产品</li></a>
+					<a href="search_result_can.html"><li class="fl">烟酒</li></a>
+					<a href="search_result_can.html"><li class="fl">特色产品</li></a>
+					<a href="search_result_can.html"><li class="fl">烟酒</li></a>
+					<a href="search_result_can.html"><li class="fl">特色产品</li></a>
+				</ul>
+			</div>
+		</div>
+		<p class="search_none_tip">抱歉未找到该商品</p>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/oder.js"></script>
+		<script>
+			$(function(){
+				$('.bar_text').click(function(){
+				  $('.s_inp').val('');	
+				  $(this).fadeOut();
+				});
+				$('.s_inp').keyup(function(){
+					if(!$(this).val()=='')
+					$('.bar_text').fadeIn();
+				});
+				
+				$('.s_min ul li').click(function(){
+				$('.s_min ul li').css({'background':'#dedede','color':'#848484'})
+				$(this).css({'background':'#e0ecf5','color':'#000'})		
+			});
+			});
+			
+		</script>
+	</body>
+</html>

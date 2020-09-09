@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>周边</title>
+
+		<link rel="stylesheet" href="css/openfabase.css" />
+		<style type="text/css">
+			body, html,#allmap {width: 100%;height: 100%; margin:0;font-family:"微软雅黑";}
+			#l-map{height:300px;width:100%;}
+			#r-result{width:100%;}
+		</style>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=y8tXQrM0vxeLWsp0rrUzjC6d"></script>
+	</head>
+
+	<body>
+		<div class="nav_bar clearfix">
+			<div class="col-3"><a href="index.html" class="back"><img src="images/back-arrow.png" alt="" /></a></div>
+			<div class="col-6 title">周边</div>
+			<div class="col-3 right">				
+			</div>  
+		</div>
+
+		<!--<div class="nn_top">
+			<!--头部-->
+				<!--<div class="top">
+					<p>
+						<a href="index.html"><img src="images/back-arrow.png"></a>周边
+					</p>
+				</div>-->
+			<!--头部-->
+			<!--<div class="nnt_text">
+				<span>周边</span>
+			</div>-->
+		<!--</div>-->
+		<div class="top_nav">
+			<ul>
+				<li class="active">餐饮</li>
+				<li>娱乐</li>
+				<li>交通</li>
+				<li>景点</li>
+				<li>购物</li>
+			</ul>
+		</div>
+		<div id="l-map"></div>
+		<div id="r-result"></div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn"><a href="javascript:;">重新加载</a></p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".top_nav ul li").click(function() {
+					$(".top_nav ul li").removeClass("active");
+					$(this).addClass("active");
+					var type = $(this).text();
+					if(type == "交通"){
+						type = "[\"地铁站\",\"公交站\"]"
+					}else{
+						type = "[\""+type+"\"]"
+					}
+					baidumap(type);
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			// 百度地图API功能
+			var map = new BMap.Map("l-map");            // 创建Map实例
+			map.centerAndZoom(new BMap.Point(116.499938, 39.981592), 15);
+			function baidumap(obj){
+				var myKeys = obj;
+				var local = new BMap.LocalSearch(map, {
+					renderOptions:{map: map, panel:"r-result"},
+					pageCapacity:10
+				});
+				local.searchInBounds(myKeys, map.getBounds());
+			}
+			baidumap("[\"餐饮\"]");
+			
+		</script>
+	</body>
+
+</html>

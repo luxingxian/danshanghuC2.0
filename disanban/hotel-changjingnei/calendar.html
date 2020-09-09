@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>日历</title>
+		<link rel="stylesheet" href="css/trip-calendar.css" />
+		<style>
+			/*无网络弹窗*/
+			
+			.tan_drop {
+				background-color: rgba(0, 0, 0, .4);
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: none;
+				z-index: 101;
+			}
+			
+			.no_network {
+				background-color: rgba(0, 0, 0, .4);
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: none;
+				z-index: 101;
+			}
+			
+			.tan_box {
+				width: 14em;
+				background-color: #fff;
+				border-radius: 0.3rem;
+				position: absolute;
+				top: 30%;
+				left: 50%;
+				margin-left: -7em;
+			}
+			
+			.tan_box .text {
+				text-align: center;
+				color: #424242;
+				font-size: 0.85em;
+				margin: 2.7em 0 1.35em 0;
+			}
+			
+			.tan_box .room_btn {
+				text-align: center;
+			}
+			
+			.tan_box .room_btn a {
+				text-align: center;
+				display: inline-block;
+				height: 1.85rem;
+				line-height: 1.85rem;
+				width: 8rem;
+				border-radius: 1.45rem;
+				background-color: #0e76d8;
+				color: #fff;
+				font-size: 0.85rem;
+				border: 1px solid #0e76d8;
+			}
+			
+			.tan_box .room_btn.btn2 a {
+				background-color: #fff;
+				margin: 0.75em 0 1.25em 0;
+				color: #0e76d8;
+				border: 1px solid #0e76d8;
+				box-sizing: border-box;
+			}
+			
+			.tan_box img {
+				height: 2.5em;
+				width: 2.5em;
+				position: absolute;
+				top: -1.25em;
+				left: 50%;
+				margin-left: -1.25em;
+			}
+			
+			.no_network .tan_box .room_btn,
+			.tan4 .tan_box .room_btn {
+				margin: 2em 0 1.2em 0;
+			}
+		</style>
+		<script src="js/yui-min.js"></script>
+		<script>
+			YUI({
+				modules: {
+					'trip-calendar': {
+						fullpath: 'trip-calendar.js',
+						type: 'js',
+						requires: ['trip-calendar-css']
+					},
+					'trip-calendar-css': {
+						fullpath: 'trip-calendar.css',
+						type: 'css'
+					}
+				}
+			}).use('trip-calendar', function(Y) {
+				/**
+				 * 非弹出式日历实例
+				 * 直接将日历插入到页面指定容器内
+				 */
+				var oCal = new Y.TripCalendar({
+					container: '#J_Calendar', //非弹出式日历时指定的容器（必选）
+					selectedDate: new Date //指定日历选择的日期
+				});
+
+				//日期点击事件
+				oCal.on('dateclick', function() {
+					var selectedDate = this.get('selectedDate');
+					//      alert(selectedDate + '\u3010' + this.getDateInfo(selectedDate) + '\u3011');
+				});
+
+				Y.one('#J_Example').delegate('click', function(e) {
+					var oTarget = e.currentTarget;
+					value = oTarget.getAttribute('data-value');
+					switch(true) {
+						//日历个数
+						case oTarget.hasClass('J_Count'):
+							this.set('count', value).render();
+							break;
+					}
+				}, 'button', oCal);
+			});
+		</script>
+	</head>
+
+	<body style="background: #fff;">
+		<!--头部-->
+		<div class="top">
+			<p>
+				<a href="table-reservation.html"><img src="images/m_icon_1.png"></a>选择日期
+			</p>
+		</div>
+		<!--<div class="top1">
+			<p>
+				<a href="shop.html"><img src="images/m_back2.png"></a>餐饮
+			</p>
+		</div>-->
+		<!--头部-->
+
+		<div id="J_Calendar" class="calendar"></div>
+		<div class="min_btn">确定</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<!--尾部-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/trip-calendar.js"></script>
+		<script>
+			$(function() {
+				$('.s_mian ul li').click(function() {
+					$('.s_mian ul li').removeClass('on');
+					$(this).addClass('on');
+				})
+			});
+		</script>
+	</body>
+
+</html>

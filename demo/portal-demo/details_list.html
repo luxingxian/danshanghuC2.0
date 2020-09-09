@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+
+		<title>资讯详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />	
+		<link rel="stylesheet" type="text/css" href="css/l_tell_pop.css"/>
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<script type="text/javascript" src="js/oder.js"></script>
+
+	</head>
+	
+	<body>
+		<!--头部-->
+			<div class="navBar">
+				<p class="navName">资讯详情</p>
+				<a href="index.html" class="backArrow"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+		<!--头部-->
+		<div class="detalis_all">
+			<!--顶部banner-->
+			<div class="detalis_top">
+				<img src="images/songhe2.jpg">
+			</div>
+			<!--顶部banner结束-->
+			<!--来源-->
+			<div class="detalis_source">
+				<div class="details_tou">
+					<img src="images/songhe2.jpg">
+				</div>
+				<div class="detalis_source_name">
+					<p>来自<span>今日头条</span>&nbsp;&nbsp;鲁兴先</p>
+				</div>
+			</div>
+
+			<!--来源结束-->
+
+			<div class="detalis_content">
+				<div class="detalis_content_name">
+					<p>故宫边上的小四合院，北京最具京味的民宿</p>
+				</div>
+				<!--<div class="detalis_content_infor">
+					<ul>
+						<li><img src="images/address.png"><span>北京</span></li>
+						<li class="sx"><span> | </span></li>
+						<li><img src="images/kind.png"><span>旅游</span></li>
+					</ul>
+				</div>-->
+			</div>
+			<!--正文-->
+			<div class="l_section">
+				<div class="l_title">
+					<h3><span>故宫边上的</span></h3>
+				</div>
+				<p class="img"><img src="images/qingjiu.jpg" alt="" /></p>
+				<p class="l_text">北京中香界·北长街四合院是一座小型四合院民宅，坐落在北京故宫博物院西侧的北长街里。小院所处地理位置奇佳，东临明清两代皇宫紫禁城，西临中央国家机关办公所在地中南海，南临天安门广场，北临景山公园和北海公园两座皇家园林。
+好屋不怕巷子深</p>
+				<p class="img"><img src="images/qingjiu.jpg" alt="" /></p>
+				<p class="l_text">胡同深处，一处朱门，行人都拍照驻足，以为是哪个大户人家，这家店没有招牌和门牌，但从外地特地赶来的朋友，一走进便知道是中香界...</p>
+
+			</div>
+
+			<!--正文结束-->
+			<div class="details_bottom">
+				<p>店铺详情</p>
+				<a href="address.html"><p class="l_add"><img src="images/bottom_address.png">北京市西城区北长街25号</p></a>
+				<p class="hotel_phone"><img src="images/bottom_phone.png">010-66021889</p>
+			</div>
+		</div>
+		<!------电话拨打提醒---弹窗-->
+			<div class="tan_drop bg_tell">
+				<div class="tan_box">
+					<p class="text ">拨打电话 <span>400071800</span></p>
+					<p class="room_btn"><a href="javascript:;" class="cancle">取消</a><a href="javascript:;" class="ok">确定</a></p>
+				</div>
+			</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script>
+			$(".l_content *").removeAttr("style");
+			$(".l_content img").removeAttr("img_height")
+			$(".l_content img").removeAttr("img_width")
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$(".hotel_phone").click(function(){
+					$(".bg_tell").fadeIn();
+					$("body").css({"position": "fixed","top": "0","bottom": "0","left": "0","width": "100%"});
+				})
+				$(".bg_tell .cancle").click(function(){
+					$(".bg_tell").fadeOut();
+					$("body").removeAttr("style");
+				})
+			})
+		</script>
+	</body>
+
+</html>

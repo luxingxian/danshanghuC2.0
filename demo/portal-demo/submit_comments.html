@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>提交评论</title>
+		<link rel="stylesheet" href="css/comment.css" />
+	</head>
+
+	<body style="background: #fff;">
+
+		<div class="submitmain">
+			<div class="submtop">
+				<a href="javascript:;">
+					<img src="images/back-arrow.png" />
+				</a>
+				<span>提交评论</span>
+			</div>
+			<div class="submtexttop">
+				<p>
+					<img src="images/mycmicon01.png" />
+					<span>微商城</span>
+				</p>
+			</div>
+			<div class="submstar">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="submtext">
+				<textarea placeholder="亲，商品如何，对服务还满意吗？" id="s_textar" maxlength="120" onpaste="javascript:setShowLength(this, 50, 's_em');"></textarea>
+				<span><em id="s_em">0</em>/120</span>
+			</div>
+			<div class="submpraise">
+				<p>
+					<span>康师傅红烧牛肉桶装面</span>
+					<em class="subcai"><i></i>踩</em>
+					<em class="subzan"><i></i>赞</em>
+				</p>
+				<p>
+					<span>百岁山瓶装矿泉水500ml</span>
+					<em class="subcai"><i></i>踩</em>
+					<em class="subzan"><i></i>赞</em>
+				</p>
+				<p>
+					<span>牛栏山二锅头普通装</span>
+					<em class="subcai"><i></i>踩</em>
+					<em class="subzan"><i></i>赞</em>
+				</p>
+			</div>
+			<div class="subanonymity">
+				<p>
+					<em></em>
+					<span>匿名评价</span>
+				</p>
+			</div>
+			<a href="javascript:;" class="subbut">提交评论</a>
+		</div>
+
+		<!--评价提交成功-->
+		<div class="submitwin">
+			<div class="subwinmain">
+				<img src="images/submin.png" class="subwinimg" />
+				<i class="subwini"></i>
+				<p class="subwinpone">评价提交成功！</p>
+				<p class="subwinptwo">
+					<a href="mycomments.html" class="see_evaluate">查看评价</a>
+					<a href="javascript:;" class="stroll">去逛逛~</a>
+				</p>
+			</div>
+		</div>
+
+		<!--评论尚未提交-->
+		<div class="submitnot">
+			<div class="subnotmain">
+				<i class="subnoti"></i>
+				<p class="subnotpone">评论尚未提交</p>
+				<p class="subnotptwo">返回将放弃提交！</p>
+				<p class="subnotpthree">
+					<a href="javascript:;" class="subnotreturn">返回</a>
+					<a href="javascript:;" class="subnotrego">继续填写</a>
+				</p>
+			</div>
+		</div>
+
+		<!--提交评价失败-->
+		<div class="submitlost">
+			<span>提交评价失败，请重新提交~</span>
+		</div>
+
+		<script src="js/oder.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script>
+			$(function() {
+				//星评
+				$('.submstar ul li').click(function(e) {
+					var eqi = $(this).index();
+					$('.submstar ul li').removeClass('scstart');
+					for(var i = 0; i < eqi + 1; i++) {
+						$('.submstar ul li').eq(i).addClass('scstart');
+					}
+					$(".subbut").addClass("active");
+				});
+				//赞、踩
+				$('.submpraise p em').click(function(e) {
+					$(this).parent().find("em").removeClass("active");
+					$(this).addClass("active");
+				});
+				//匿名评价
+				$('.subanonymity p em').click(function(e) {
+					if($(this).hasClass("active")) {
+						$(this).removeClass("active");
+					} else {
+						$(this).addClass("active");
+					}
+				});
+				//评论尚未提交
+				$('.submtop a').click(function(e) {
+					$(".submitnot").fadeIn();
+				});
+				$('.subnoti,.subnotrego').click(function(e) {
+					$(".submitnot").fadeOut();
+				});
+				//评价提交成功
+				$('.subbut').click(function(e) {
+					if($(this).hasClass("active")) {
+						$(".submitwin").fadeIn();
+					} else {}
+				});
+				$('.subwini').click(function(e) {
+					$(".submitwin").fadeOut();
+				});
+			});
+			//字数限制js
+			window.onload = function() {
+				var oDiv = document.getElementById('s_em');
+				var oTxt = document.getElementById('s_textar');
+				if(window.navigator.userAgent.indexOf('MSIE 9.0') != -1) {
+					var timer = null;
+					oTxt.onfocus = function() {
+						var num = oTxt.value.length;
+						timer = setInterval(function() {
+							oDiv.innerHTML = oTxt.value.length;
+						}, 30);
+					};
+					oTxt.onblur = function() {
+						clearInterval(timer);
+					};
+				} else {
+					oTxt.onpropertychange = oTxt.oninput = function() {
+						oDiv.innerHTML = oTxt.value.length;
+					};
+				}
+			};
+		</script>
+
+	</body>
+
+</html>

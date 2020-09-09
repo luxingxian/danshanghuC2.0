@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>个人资料</title>
+		<link rel="stylesheet" href="css/personal_center.css" />
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="photoClip/iscroll-zoom.js"></script>
+		<link href="topMenu/topMenu.css" rel="stylesheet">
+		<script src="topMenu/topMenu.js"></script>
+		<link href="photoClip/style.css" rel="stylesheet">
+		<script src="photoClip/sonic.js"></script>
+		<script src="photoClip/comm.js"></script>
+		<script src="photoClip/hammer.js"></script>
+		<script src="photoClip/jquery.photoClip.js?v=1"></script>
+		<link href="photoClip/index.css" rel="stylesheet">
+		<script src="photoClip/index.js"></script>
+		<script src="photoClip/photoClipInterface.js"></script>
+	</head>
+
+	<body onload="loaded()">
+		<div id="headPortrait-interface">
+			<!--头部-->
+			<div class="nav_bar clearfix">
+				<div class="col-3">
+					<a href="personal data.html" class="back"><img src="images/back-arrow.png" alt="" /></a>
+				</div>
+				<div class="col-6 title">个人资料</div>
+				<div class="col-3 right"></div>
+			</div>
+
+			<div class="partner">
+				<div class='s_partner'>
+					<ul>
+						<li class=" clear">
+							<!--<p class="fl">头像</p>
+						<p class="s_ma fr">
+							<img src=" images/icon_6.png" />								
+						</p>
+						<div class="corll fr">
+							<p>
+								<img src="images/user_pic.png" />
+								<input type="file" value="" />
+							</p>
+						</div>-->
+							<!--头像-->
+							<p class="s_ma fr">
+								<img src=" images/icon_6.png" />
+							</p>
+							<div id="headPortrait-wrapper" style="height: 2.45rem;">
+								<div>
+									<div style="float: left;">头像</div>
+									<div style="float: right;width: 1.675rem;height: 1.675rem; border-radius: 24%;margin: 0.5em 1.3em;">
+										<img src="images/user_pic.png" style="width: 100%;height: 100%;display: block;border-radius: 24%;" />
+									</div>
+								</div>
+							</div>
+
+						</li>
+						<li class="s_title clear">
+							<a href="personal data_r.html" class=" clear">
+								<p class="fl">姓名</p>
+								<p class="s_ma fr">
+									<img src=" images/icon_6.png" />
+								</p>
+								<p class="fr f_p">车南</p>
+							</a>
+						</li>
+						<li class="m_none clear">
+							<p class="fl">手机号</p>
+							<p class="fr m_p">138****1234</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="photoClip-interface" style="display: none;width: 100%;height: 100%;">
+
+			<!--顶部菜单-->
+			<div id="topMenu-wrapper2">
+			</div>
+
+			<!--图片加载-->
+			<div id="photoClip-wrapper">
+				<div class="lazy_tip" id="lazy_tip"><span>1%</span><br> 载入中......</div>
+				<div class="lazy_cover"></div>
+				<div class="pic_edit">
+					<div id="clipArea"></div>
+					<input type="file" id="file" style="opacity: 0;position: fixed;bottom: -100px">
+				</div>
+				<img src="" fileName="" id="hit">
+			</div>
+
+		</div>
+
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/oder.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>商城-订单详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/lu_wei.css"/>
+		<link rel="stylesheet" type="text/css" href="css/l_tell_pop.css"/>
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="order_detail_wei">
+			<div class="nav_bar clearfix">
+				<div class="col-3"><a href="commodity_order.html" class="back"><img src="images/back2.png" alt="" /></a></div>
+				<div class="col-6 title">订单详情</div>
+				<div class="col-3 right"></div>  
+			</div>
+			<!--nav     ed-->
+			<p class="ing marTop"><span>待买家提交</span>&nbsp;&nbsp;<span>(24小时内未提交成功订单自动删除)</span></p>
+			<div class="address_top">
+				<p>车南<span>153****7155</span></p>
+				<p class="add">望京科技园其阳路4号</p>
+			</div>
+			
+				<div class="good_detail_title">
+					<img src="images/bar.png" alt="" />商城
+				</div>
+			<div class="l_container good_detail">
+				<img src="images/wancheng.png" alt="" class="yinzhang" />
+				<a href="grogshop_details_r.html">
+					<div class="l_content clearfix">
+						<div class="left"><img src="images/sijiantao4.png" alt="" /></div>
+						<div class="right">
+							<p class="goods_name">床品四件套</p>
+							<p class="price">￥<span>664.00</span></p>
+							<p class="count"><span class="num">x1</span></p>
+							
+						</div>
+					</div>
+				</a>
+				<a href="grogshop_details_r.html">
+					<div class="l_content clearfix">
+						<div class="left"><img src="images/sijiantao4.png" alt="" /></div>
+						<div class="right">
+							<p class="goods_name">巧克力礼盒</p>
+							<p class="price">￥<span>998.00</span></p>
+							<p class="count"><span class="num">x1</span></p>
+						</div>
+					</div>
+				</a>
+			</div>			
+			<div class="f_list_text">
+				<p><span class="float-left">配送方式</span><span class="float-right">物流配送</span></p>
+				<p><span class="float-left">支付方式</span><span class="float-right">微信支付</span></p>				
+			</div>
+			<div class="l_container goods_total">				
+				<div class="l_content">
+					<p class="liuyan clearfix"><span class="titleBei">买家留言</span><span class="l_text3">快速配送快速配送快速配送快速配送快速配送快速配送</span></p>
+				</div>
+			</div>
+			<p class="detail_count">共<i>2</i>件商品&nbsp;&nbsp;&nbsp;付款:￥<i>1662.00</i></p>
+			<div class="l_container order_mess">
+				<h3 class="title">订单信息</h3>
+				<div class="l_content">
+						<p class="clearfix"><span>订单编号</span><span>000111222333444</span></p>
+						<p class="clearfix"><span>提交时间</span><span><em>2017-02-27</em>&nbsp;&nbsp;&nbsp;<em>18:45</em></span></p>
+						<p class="clearfix"><span>发货时间</span><span><em>2017-02-28</em>&nbsp;&nbsp;&nbsp;<em>12:15</em></span></p>
+						<div class="hotel_phone"><a href="javascript:;"><img src="images/icon_call.png" alt="" />联系酒店</a></div>
+				</div>
+			</div>
+			<p class="foot_btns">
+				<a href="goodsList.html" class="sub_btn sub_btn2 gm">再次购买</a>
+				<a href="javascript:;" class="sub_btn sub_btn2 tj">立即提交</a>
+				<a href="javascript:;" class="sub_btn qx">取消订单</a>
+				<a href="details_refund.html" class="sub_btn tk">查看退款</a>
+				<a href="Logistics.html" class="sub_btn wl">查看物流</a>
+			</p>
+			
+		</div>
+		
+		<!--删除订单提示弹窗-->
+		<div class="tan_drop tan4 tan_dele">
+			<div class="tan_box">
+				<p class="text">您确定要删除订单吗?</p>
+				
+				<p class="btn3 room_btn"><a href="javascript:;" class="cancle">取消</a><a href="commodity_order.html" class="ok">确定</a></p>
+				
+			</div>
+		</div>
+		<p class="dele_ok order_tip">删除订单成功</p>
+		<!--取消订单提示弹窗-->
+		<div class="tan_drop tan4 tan_cancle">
+			<div class="tan_box">
+				<p class="text">您确定要取消订单吗?</p>
+				
+				<p class="btn3 room_btn"><a href="javascript:;" class="cancle">取消</a><a href="commodity_order.html" class="ok">确定</a></p>
+			</div>
+		</div>
+		<p class="cancle_ok order_tip">取消订单成功</p>
+		
+		<!------电话拨打提醒---弹窗-->
+			<div class="tan_drop bg_tell">
+				<div class="tan_box">
+					<p class="text">拨打电话 <span>400071800</span></p>
+					<p class="room_btn"><a href="javascript:;" class="cancle">取消</a><a href="javascript:;" class="ok">确定</a></p>
+				</div>
+			</div>
+		
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".hotel_phone").click(function(){
+					$(".bg_tell").fadeIn();
+				})
+				$(".bg_tell .cancle").click(function(){
+					$(".bg_tell").fadeOut();
+				})
+			})
+		</script>
+	<script type="text/javascript">
+		$(function(){
+			$(".sc").click(function(){
+					$(".tan_dele").fadeIn();
+					$("body").css({"position": "fixed","top": "0","bottom": "0","left": "0","width": "100%"});
+				})
+			$(".qx").click(function(){
+					$(".tan_cancle").fadeIn();
+					$("body").css({"position": "fixed","top": "0","bottom": "0","left": "0","width": "100%"});
+				})
+				$(".cancle").click(function(){
+					$(this).parents(".tan_drop").fadeOut();
+					$("body").removeAttr("style")
+				})
+				$(".ok").click(function(){
+					$(this).parents(".tan_drop").fadeOut();
+					$(this).parents(".tan_drop").next(".order_tip").fadeIn().delay(1000).fadeOut()
+					$("body").removeAttr("style")
+					
+				})
+		})
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			var heiT=$(".titleBei").height();
+			var hei=$(".l_text3").height();
+				if(hei>heiT){
+					$(".l_text3").css({"position": "absolute","top": "0.4em"})
+				}
+				//备注留言一行两行上下居中设置
+		})
+	</script>
+		
+	</body>
+</html>

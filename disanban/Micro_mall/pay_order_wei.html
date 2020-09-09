@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>微商城-订单支付</title>
+		<link rel="stylesheet" type="text/css" href="css/lu_wei.css"/>
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="sub_order_wei">
+			<div class="nav_bar clearfix">
+				<div class="col-3"><a href="javascript:;" class="back"><img src="images/back2.png" alt="" /></a></div>
+				<div class="col-6 title">订单支付</div>
+				<div class="col-3 right"></div>  
+			</div>
+			<!--nav     ed-->
+			<div class="address_top">
+				<p>JACK<span>153****7155</span></p>
+				<p class="add">北京北京市朝阳区酒仙桥中路先锋金融大厦路</p>
+			</div>
+			<div class="good_detail_title">
+				<img src="images/bar.png" alt="" />商品详情
+			</div>
+			<div class="l_container good_detail">
+				<div class="l_content clearfix">
+					<div class="left"><img src="images/shop_pic1.png" alt="" /></div>
+					<div class="right">
+						<p class="goods_name">二十年典藏82年拉菲</p>
+						<p class="price">￥<span>3.00</span>&nbsp;<del>￥6.00</del></p>
+						<p class="count"><span class="less">库存不足，仅可购买1件</span><span class="num">x890</span></p>
+					</div>
+				</div>
+				<div class="l_content clearfix">
+					<div class="left"><img src="images/shop_pic1.png" alt="" /></div>
+					<div class="right">
+						<p class="goods_name">二十年典藏82年拉菲</p>
+						<p class="price">￥<span>3.00</span>&nbsp;<del>￥6.00</del></p>
+						<p class="count"><span class="less">库存不足，仅可购买1件</span><span class="num">x80</span></p>
+					</div>
+				</div>
+				<div class="l_content clearfix">
+					<div class="left"><img src="images/shop_pic1.png" alt="" /></div>
+					<div class="right">
+						<p class="goods_name">二十年典藏82年拉菲</p>
+						<p class="price">￥<span>3.00</span>&nbsp;<del>￥6.00</del></p>
+						<p class="count"><span class="less">库存不足，仅可购买1件</span><span class="num">x8</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="l_container goods_total">
+				<img src="images/bar.png" alt="" />
+				<div class="l_content">
+					<p><span class="one">共<i>979</i>件商品</span><span class="two">需付款:<em>￥<i>300000.00</i></em></span></p>
+					<p><span class="one">买家留言</span><span class="two"><input type="text" maxlength="20" placeholder="填写您的要求"/></span></p>
+					<div class="pay_m">
+						<p>支付方式:&nbsp;<span>微信支付</span></p>
+						<p class="last">配送方式:&nbsp;<span>微物流配送</span></p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="good_detail_title good_bad_title">失效商品</div>
+			<div class="l_container good_detail good_bad">
+				<div class="l_content clearfix">
+					<div class="left"><img src="images/shop_pic1.png" alt="" /></div>
+					<div class="right">
+						<p class="goods_name">二十年典藏82年拉菲</p>
+						<p class="count">已售罄</p>
+					</div>
+				</div>
+				<div class="l_content clearfix">
+					<div class="left"><img src="images/shop_pic1.png" alt="" /></div>
+					<div class="right">
+						<p class="goods_name">二十年典藏82年拉菲</p>
+						<p class="count">已失效</p>
+					</div>
+				</div>
+				<div class="l_content clearfix">
+					<div class="left"><img src="images/shop_pic1.png" alt="" /></div>
+					<div class="right">
+						<p class="goods_name">二十年典藏82年拉菲</p>
+						<p class="count">不支持线上购买</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="pay_foot">
+			<p class="pay_foot_bar">
+				<img src="images/icon_time.png" alt="" />
+				<span class="time_down">30:00</span>
+				<a href="javascript:;">立即支付</a>
+			</p>
+		</div>
+		</div>
+		
+		<!--订单提交失败弹窗-->
+		<div class="tan_drop tan5">
+			<div class="tan_box">
+				<img src="images/icon_warn.png" alt="" />
+				<p class="text">支付失败，请重新支付</p>
+				<p class="btn3 room_btn"><a href="javascript:;">保存订单</a></p>
+			</div>
+		</div>
+		<!--取消支付-->
+		<div class="tan_drop tan6">
+			<div class="tan_box">
+				<p class="text">支付尚未完成，是否取消支付</p>
+				<p class="btn3 room_btn"><a href="javascript:;">确定</a></p>
+			</div>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network ">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$(function(){
+			$(".back").click(function(){
+				$(".tan4").fadeIn();
+				$("body").css({"position": "fixed","top": "0","bottom": "0","left": "0","width": "100%"});
+			})
+			
+			$(".cancle").click(function(){
+				$(this).parents(".tan_drop").fadeOut();
+				$("body").removeAttr("style")
+			})
+		})
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//30分钟倒计时	
+			var min=30;
+			var sec=00;
+			function time_down(){
+				sec--;
+				if(sec<0){
+					min--;
+					sec=59;
+				}
+				if(min<0){
+					min=0;
+				}
+				if(sec<10){
+					$(".time_down").html(min+":0"+sec)
+				}else{
+					$(".time_down").html(min+":"+sec)	
+				}	
+			}
+			setInterval(function(){time_down();},1000)
+	
+		})
+	</script>
+		
+	</body>
+</html>

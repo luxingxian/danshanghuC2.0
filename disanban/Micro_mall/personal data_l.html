@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>快速注册</title>
+		<link rel="stylesheet" href="css/personal_center.css"/>	
+		<script src="js/oder.js"></script>
+	</head>
+	<body>
+	<!--头部-->
+		<div class="l_container nav_bar">
+				<div class="l_content clearfix">
+					<div class="col-2 back"><a href=""><img src="images/back2.png" alt="" /></a></div>
+					<div class="col-8 title"><h1>快速注册</h1></div>
+					<div class="col-2 icons">
+					</div>
+				</div>
+		</div>
+	<!--头部-->
+		<div class="partner">
+			<div class='s_partner'>
+				<div class="name">
+					<span class="s_n fl">手机号</span>
+					<input type="number"fl" value="" placeholder="请输入手机号" />				
+				</div>				
+			</div>
+			<div class='s_partner1'>
+				<div class="name1">
+					<span class="s_n fl">短信验证码</span>
+					<input type=" text" class="fl s_last1" value="" placeholder="请输入短信验证码" />
+					<input type="button" class="s_span_l fr" value="获取验证码">
+					<p class=" fl s_ming">
+						<img src="images/icon_2.png"/>					
+					</p>
+				</div>				
+			</div>
+			<div class='s_partner1'>
+				<div class="name1">
+					<span class="s_n fl">验证码</span>
+					<input type=" text"class="fl" value="" placeholder="请输入验证码" />
+					<p class="s_name2 fl">
+						<img src="images/yan.png" />
+					</p>
+				</div>				
+			</div>
+		</div>
+		<div class="list_btn">
+			<input type="button"value="确 定"/>
+		</div>
+		
+		
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('.s_m').click(function(){
+					$('.name input').val("").focus();
+				});
+			});
+		</script>		
+		<script>
+			$(function(){
+				var s=60+1;
+				var timer=null;
+				$('.s_span_l').click(function(){
+					function tab(){
+						$('.s_span_l').attr('disabled',true)
+						s--;
+						$('.s_span_l').val(''+s+'秒后重新发送');
+						if(s<=60){
+							$('.s_span_l').css('background','#dedede');
+						};
+						if(s<0){
+							clearInterval(timer);
+							$('.s_span_l').val('重新发送')
+							$('.s_span_l').css('background','#0e76d');
+							$('.s_span_l').attr('disabled',false)							
+							s=60+1;
+						};
+					}
+					tab();
+					timer = setInterval(tab,1000);
+				});
+			});
+			
+		</script>
+		<script>
+			$(function(){
+				$('.s_last1').keyup(function(){
+					$('.s_ming').fadeIn();
+				});
+				
+				$('.s_ming').click(function(){
+					$('.s_last1').val(' ');
+				});
+			});
+		</script>
+		
+
+	
+		<!--无网络弹窗-->
+		<div class="no_network ">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

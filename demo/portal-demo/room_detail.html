@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>客房详情</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/l_tell_pop.css"/>
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+	</head>
+	<body style="background-color: #fff;">		
+	<!--轮播开始-->
+	<div class="min_content" >
+		<div class="w_mian" style="margin-top: 0;">
+			<ul class="clearfix">
+				<li class="w_hleft">
+					<div id="slideBox" class="slideBox">
+						<div class="bd">
+							<ul>
+								<li>
+									<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+								</li>
+								<li>
+									<a class="pic" href="javascript:;"><img src="images/songhe1.jpg"></a>
+								</li>
+								<li>
+									<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="hd">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<p class="min_img">
+				<a href="roomList.html"><img src="images/icon_back_drop.png"/></a>							
+			</p>
+			<p class="s_xie">联系酒店</p>
+			<!--<div class="s_poition">			
+			</div>			-->
+		</div>
+		<div class="min_text clear">
+			<div class="text_div fl">
+				<p class="frist">&yen;3574.00</p>
+				<p class="last">行政客房</p>
+			</div>			
+		</div>
+		<div class="s_grop clear">
+			<span class="s_span fl">房间面积 : </span>
+			<p class="fl clear">
+				<span>59㎡</span>
+				<span>可住3人</span>
+				<span>含3份早餐</span>
+			</p>
+		</div>
+		<div class="s_grop clear">
+			<span class="s_span fl">房间设施 : </span>
+			<p class="fl clear">
+				<span class="bedStyle">床型</span>
+				<span class="bedDir">大床,1.5米床2.0米大床2.0米大床2.0米大床2.0米</span>
+			</p>
+		</div>
+		<div class="s_grop clear addBed">
+			<span class="s_span fl">能否加床 : </span>
+			<p class="fr clear">
+					<em class="no">不能</em>
+					<em class="yes">能<span>￥200.00元/床/晚</span></em>
+				</p>
+		</div>
+		<div class="sheshi">
+			<ul class="clear">				
+				<li class="fl clear">
+					<p class="fl img_1">
+						<img src="img/s_plase02.png"/>			
+					</p>
+					<p class="list_text2 fl">免费瓶装水</p>
+				</li>
+				<li class="fl clear">
+					<p class="s_left fl img_2">
+						<img src="img/s_plase03.png"/>			
+					</p>
+					<p class="list_text2 fl">拖鞋</p>
+				</li>
+				<li class="fl clear">
+					<p class="fl img_4">
+						<img src="img/s_plase04.png"/>			
+					</p>
+					<p class="list_text2 fl">浴衣</p>
+				</li>
+				<li class="s_right fl clear">
+					<p class="fl img_3">
+						<img src="img/s_plase05.png"/>			
+					</p>
+					<p class="list_text2 fl">吹风机</p>
+				</li>	
+				<li class="s_right fl clear">
+					<p class="fl img_3">
+						<img src="img/s_plase06.png"/>			
+					</p>
+					<p class="list_text2 fl">针线包</p>
+				</li>	
+				<li class="s_right fl clear">
+					<p class="fl img_3">
+						<img src="img/s_plase07.png"/>			
+					</p>
+					<p class="list_text2 fl">雨伞</p>
+				</li>	
+				<li class="s_right fl clear">
+					<p class="fl img_3">
+						<img src="img/s_plase08.png"/>			
+					</p>
+					<p class="list_text2 fl">电热水壶</p>
+				</li>	
+			</ul>
+			<!--<p class="s_number">更多....</p>-->			
+		</div>
+	</div>	
+	
+	<!------电话拨打提醒---弹窗-->
+		<div class="tan_drop bg_tell">
+			<div class="tan_box">
+				<p class="text">拨打电话 <span>400071800</span></p>
+				<p class="room_btn"><a href="javascript:;" class="cancle">取消</a><a href="javascript:;" class="ok">确定</a></p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/oder.js"></script>
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+		<!--<script type="text/javascript" src="js/swiper.min.js"></script>-->
+		
+		<script type="text/javascript">
+			$(function(){
+				var heiT=$(".bedStyle").height();
+				var hei=$(".bedDir").height();
+				if(hei>heiT){
+					$(".bedDir").css({"position": "absolute","top": "0.5em"})
+				}
+				//床型描述一行两行上下居中设置
+				
+				
+				$(".s_xie").click(function(){
+					$(".bg_tell").fadeIn();
+				})
+				$(".bg_tell .cancle").click(function(){
+					$(".bg_tell").fadeOut();
+				})
+				
+				$(".addBedRadio input").click(function(){
+					if($(this).attr("checked")=="checked"){
+						$(".priceInput").hide();
+					}else{
+						$(".priceInput").show();
+					}
+				})
+			})
+		</script>
+		<!--轮播js-->
+		<script type="text/javascript">
+			TouchSlide({
+				slideCell: "#slideBox",
+				titCell: ".hd ul", //开启自动分页 autoPage:true，此时设置 titCell 为导航元素包裹层
+				mainCell: ".bd ul",
+				effect: "leftLoop",
+				autoPage: true, //自动分页
+				autoPlay: true //自动播放
+			});
+		</script>
+		<!--<script>
+			$(function(){
+				var aH=$('.sheshi').height();
+				$('.sheshi').click(function(){
+					if($(this).height()==aH){
+						var Height=$('.sheshi ul').height();
+						$(this).animate({ height:Height},"normal")
+						$('.s_number').fadeOut();
+					}
+				})
+			});
+			$(function(){
+				var aLi=$('.sheshi ul li').length;	
+				if(aLi<=3){
+					$('.s_number').hide();	
+				}else{
+					$('.s_number').show();
+				}
+			});
+		</script>	-->
+	</body>
+</html>

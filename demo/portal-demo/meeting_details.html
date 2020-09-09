@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/l_tell_pop.css" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+		<script type="text/javascript" src="js/oder.js"></script>
+	</head>
+
+	<body>
+		<div class="w_content3">
+			<!--头部-->
+			<div class="navBar">
+				<p class="navName">商品详情</p>
+				<a href="meeting_shoplists.html" class="backArrow"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+			<!--头部-->
+			<!--banner-->
+			<!--轮播开始-->
+			<div class="w_mian">
+				<ul class="clearfix">
+					<li class="w_hleft">
+						<div id="slideBox" class="slideBox">
+							<div class="bd">
+								<ul>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe2.jpg" /></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe3.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="hd">
+								<ul>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<p class="s_xie">联系商家</p>
+			</div>
+			<!--轮播结束-->
+			<!--主体-->
+			<div class="l_marbottom">
+				<div class="cater_name">
+					<div class="cater_name_left fl">
+						<p>
+							北京厅
+						</p>
+					</div>
+				</div>
+				<div class="cater_like">
+					<div class="cater_like_left fl">
+						<div class="cater_name_right">
+							<p>
+								<span class="price">&yen;990.00</span><span><del>&yen;99.00</del></span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cater_middle" style="margin-bottom: 0;">
+				<div class="cater_details_name">
+					<span>详情介绍</span>
+					<i></i>
+				</div>
+				<div class="cater_matter">
+					<p>面积255平方米（2,746平方英尺）的空间，格局比例完美，无论是举行重要的宴会、会议还是活动，都能在此做出完美的座位规划。北京宴会厅亦可灵活地分为两个独立的多功能场地。</p>
+					<p class="img">
+						<img src="images/qingjiu.jpg">
+					</p>
+					
+				</div>
+
+				<p class="end_tip"><img src="images/l_icon_end.png" alt="" /></p>
+			</div>
+		</div>
+		
+		<!------电话拨打提醒---弹窗-->
+		<div class="tan_drop bg_tell">
+			<div class="tan_box">
+				<p class="text">拨打电话 <span>400071800</span></p>
+				<p class="room_btn">
+					<a href="javascript:;" class="cancle">取消</a>
+					<a href="javascript:;" class="ok">确定</a>
+				</p>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".s_xie").click(function() {
+					$(".bg_tell").fadeIn();
+				})
+				$(".bg_tell .cancle").click(function() {
+					$(".bg_tell").fadeOut();
+				})
+			})
+		</script>
+
+		<!--轮播js-->
+		<script type="text/javascript">
+			TouchSlide({
+				slideCell: "#slideBox",
+				titCell: ".hd ul", //开启自动分页 autoPage:true，此时设置 titCell 为导航元素包裹层
+				mainCell: ".bd ul",
+				effect: "leftLoop",
+				autoPage: true, //自动分页
+				autoPlay: true //自动播放
+			});
+		</script>
+		<!--轮播js结束-->
+	</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>评论页面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<script type="text/javascript" src="js/oder.js"></script>
+		<link href="css/comment.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+	</head>
+
+	<body style="background: #fff;">
+		<div class="w_content4">
+			<!--头部-->
+			<div class="nav_bar clearfix">
+				<div class="col-3"><a href="index.html" class="back"><img src="images/back-arrow.png" alt="" /></a></div>
+				<div class="col-6 title">评论页面</div>
+				<div class="col-3 right">
+					<a href="personal Center.html" class="user"><img src="images/s_icon.png" alt="" /></a>
+				</div>  
+			</div>
+			<!--头部-->	
+			<div class="comment_page">
+				<div class="comment_page_name">
+					<span>匿名评价</span>
+				</div>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="plate_entry">
+							<ul class="plate_entry_two clear">
+								<li>
+									<p><img src="images/index_Westernstylefood.png" </p>
+										<p>西餐</p>
+								</li>
+								<li>
+									<p><img src="images/index_coffee.png" </p>
+										<p>咖啡厅</p>
+								</li>
+								<li>
+									<p><img src="images/index_Chinesefood.png" </p>
+										<p>中餐</p>
+								</li>
+								<li>
+									<p><img src="images/index_Westernstylefood.png" </p>
+										<p>健身房</p>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<p><img src="images/index_Westernstylefood.png" </p>
+										<p>西餐</p>
+								</li>
+								<li>
+									<p><img src="images/index_coffee.png" </p>
+										<p>咖啡厅</p>
+								</li>
+								<li>
+									<p><img src="images/index_Chinesefood.png" </p>
+										<p>中餐</p>
+								</li>
+								<li>
+									<p><img src="images/index_Westernstylefood.png" </p>
+										<p>健身房</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="plate_entry">
+							<ul>
+								<li>
+									<p><img src="images/index_Westernstylefood.png" </p>
+										<p>西餐</p>
+								</li>
+								<li>
+									<p><img src="images/index_coffee.png" </p>
+										<p>咖啡厅</p>
+								</li>
+								<li>
+									<p><img src="images/index_Chinesefood.png" </p>
+										<p>中餐</p>
+								</li>
+								<li>
+									<p><img src="images/index_Westernstylefood.png" </p>
+										<p>健身房</p>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+
+			<div class="comment_hx"></div>
+			<div class="comment_start">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+
+			<div class="comment_appraise">
+				<ul>
+					<li>
+						<span>干净，整洁，美观,干净，整洁，美观</span><img src="images/hand_gray.png" data-img="images/hand_light.png">
+					</li>
+					<li>
+						<span>环境不太好</span><img src="images/hand_gray1.png" data-img="images/hand_light.png">
+					</li>
+					<li>
+						<span>不整洁</span><img src="images/hand_gray1.png" data-img="images/hand_light.png">
+					</li>
+					<li>
+						<span>干净</span><img src="images/hand_gray.png" data-img="images/hand_light.png">
+					</li>
+				</ul>
+			</div>
+			<div class="s_tex">
+				<textarea placeholder="匿名评价，放心填写" class="input" id="s_textar" maxlength="120" onpaste="javascript:setShowLength(this, 50, 's_em');" style="color: #333;font-size: 0.5em;"></textarea>
+				<span><em id="s_em">0</em>/120</span>
+			</div>
+			<div class="comment_bottom">
+				<p>提交评论</p>
+			</div>
+			<div class="tanchuang_succeed">
+				<div class="fail">
+					<div class="fail_center">
+						<p class="s_poistion"><img src="images/mian.png"></p>
+						<p class="s_mnius">评论成功</p>
+					</div>					
+				</div>
+			</div>
+			
+			<!--<div class="tanchuang_fail">
+					<div class="fail">
+						<div class="fail_center">
+							<P class="s_poistion"><img src="images/shi.png"></P>
+							<p>评论失败,请重新提交</p>
+						</div>						
+					</div>
+			<div>-->
+				
+		<p class="popup_star">请选择星评</p>
+		</div>
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn"><a href="javascript:;">重新加载</a></p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript">
+		//		星评选择弹窗提示
+			$(document).ready(function(){
+				$(".comment_bottom").click(function(){
+					if($(".comment_start ul li").hasClass("start")){
+						$('.tanchuang_succeed').fadeIn().delay(1000).fadeOut();
+					}else{
+						$('.tanchuang_succeed').hide()
+						$(".popup_star").fadeIn().delay(1000).fadeOut();
+					}
+				})
+				
+			});
+		</script>
+		<!--板块滑动-->
+		<script>
+			var swiper = new Swiper('.swiper-container',{
+				pagination: '.swiper-pagination',
+				paginationClickable: true
+			});
+		</script>
+		<!--板块滑动结束-->
+		
+		<!--板块选中效果-->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$(this).find("li").click(function() {
+				$(this).find("p:first-child").toggleClass("active");
+			});
+		});
+		</script>
+		<!--星星选中效果-->
+		<script>
+			$(function() {
+				$('.comment_start ul li').click(function(e) {
+					var eqi = $(this).index();
+					$('.comment_start ul li').removeClass('start');
+					for(var i=0;i < eqi+1 ;i++){
+						$('.comment_start ul li').eq(i).addClass('start');
+					}
+				});
+			});
+		</script>		
+		<!--评价标签效果-->
+		<script type="text/javascript">
+			$(function() {
+				$(".comment_appraise li").click(function(){
+					$(this).toggleClass("active");
+				})
+			})
+		</script>
+		<!--弹窗效果-->
+		<!--<script>
+			$(function() {
+				$('.comment_bottom').click(function(e){
+					$('.tanchuang_succeed').fadeIn();
+					setTimeout( function(){tab()},2000)
+				});			
+			});
+			function tab(){
+				$('.tanchuang_succeed').fadeOut();
+			}
+		</script>-->
+		<!--<script>
+			$(function() {
+				$('.comment_bottom').click(function(e) {
+					$('.tanchuang_succeed').fadeIn(1000);
+				});
+				$('.tanchuang_fail').click(function(e) {
+					$('.tanchuang_fail').fadeOut(1000);
+					$(this).fadeOut(1000);
+				});
+				
+			});
+		</script>-->
+		
+		<!--字数限制js-->
+		<script>
+			window.onload = function() {
+				var oDiv = document.getElementById('s_em');
+				var oTxt = document.getElementById('s_textar');
+
+				if(window.navigator.userAgent.indexOf('MSIE 9.0') != -1) {
+					var timer = null;
+
+					oTxt.onfocus = function() {
+						var num = oTxt.value.length;
+						timer = setInterval(function() {
+							oDiv.innerHTML = oTxt.value.length;
+						}, 30);
+
+					};
+					oTxt.onblur = function() {
+						clearInterval(timer);
+					};
+				} else {
+
+					oTxt.onpropertychange = oTxt.oninput = function() {
+						oDiv.innerHTML = oTxt.value.length;
+					};
+				}
+			};
+		</script>
+	</body>
+
+</html>

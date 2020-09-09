@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>酒店娱乐</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<script type="text/javascript" src="js/oder.js"></script>
+		<link href="css/reset.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shoplist.css"/>
+		<style type="text/css">
+			.shoplist .shop img{width: 100%;height: auto;}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="main">
+			<!--头部-->
+			<div class="navBar">
+				<p class="navName"><span>酒店娱乐</span></p>
+				<a href="index.html" class="backArrow"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+			<!--头部-->
+			<div class="shoplist">
+				<a href="entertainment_details.html">
+					<div class="shop">
+						<img src="images/songhe1.jpg" />
+						<span><em>游泳池游泳池游泳池游泳池游泳池游泳池游泳池游泳池游泳池</em></span>
+					</div>
+				</a>
+				<a href="entertainment_details.html">
+					<div class="shop">
+						<img src="images/songhe1.jpg" />
+						<span><em>水疗</em></span>
+					</div>
+				</a>
+				<a href="entertainment_details.html">
+					<div class="shop">
+						<img src="images/songhe1.jpg" />
+						<span><em>健身设施</em></span>
+					</div>
+				</a>
+			
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//按照图片比例位置居中调整
+			$(window).load(function() {
+				$(".shoplist a").each(function() {
+					var h = $(this).find(".shop img").height();
+					var w = $(this).find(".shop img").width();
+					var w1 = $(this).find(".shop").width();
+					var h1 = $(this).find(".shop").height();
+						$(this).find(".shop img").css("margin-top", -(h - h1) / 2 + "px")
+				});
+			});
+		</script>
+	</body>
+
+</html>

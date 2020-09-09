@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>西餐-订单详情</title>
+		<link rel="stylesheet" type="text/css" href="css/lu_canyin.css" />
+		<script src="js/oder.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="background-color: #f1f1f1;">
+		<div class="nav_bar clearfix">
+			<div class="col-3">
+				<a href="Room_list.html" class="back"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+			<div class="col-6 title">订单详情</div>
+			<div class="col-3 right"></div>
+		</div>
+		<!--naved-->
+		<p class="ing"><span>待买家确认</span>&nbsp;&nbsp;<span>(24小时内未提交成功订单自动删除)</span></p>
+		<div class="order-detail_can">
+			<div class="l_container l_card l_card_shop">
+				<p class="hotel_name">餐饮</p>
+				<div class="hotel_mess">
+					<p>配送至房间 <span>1608号</span>联系人 <span class="name">鲁兴先先</span></p>
+					<p>手机 <span>15509098848</span></p>
+				</div>
+			</div>
+			<div class="l_container mess_can">
+				<h3 class="title_can">餐饮详情</h3>
+				<div class="l_content">
+					<p>
+						<span class="one">牛奶咖啡沙琪玛混合拍</span>
+						<span class="two">x<em>556</em></span>
+						<span class="three">&yen;<em>1900.00</em></span>
+					</p>
+					<p>
+						<span class="one">牛奶</span>
+						<span class="two">x<em>56</em></span>
+						<span class="three">&yen;<em>190.00</em></span>
+					</p>
+					<p>
+						<span class="one">牛奶咖啡</span>
+						<span class="two">x<em>5</em></span>
+						<span class="three">&yen;<em>1.00</em></span>
+					</p>
+					<p class="last_can">
+						<span class="one">共<em>979</em>件商品</span>
+						<span class="two">需付款:<i>&yen;<em>3000.00</em></i></span>
+					</p>
+					<p class="last_can last_can2 clearfix">
+						<span class="one">备注留言</span>
+						<span class="two">无</span>
+					</p>
+					<div class="l_tip">
+						<p class="time">支付方式:&nbsp;前台记账</p>
+						<p>发票信息:&nbsp;请到前台获取</p>
+					</div>
+				</div>
+			</div>
+			<div class="l_container bad_goods room_o">
+				<h3 class="title">订单信息</h3>
+				<div class="l_content">
+					<p><span>订单编号</span><span>000111222333444</span></p>
+					<p><span>提交时间</span><span><em>2016-06-27</em>&nbsp;&nbsp;&nbsp;<em>18:45</em></span></p>
+					<p class="hotel_phone">
+						<a href=""><img src="images/icon_call.png" alt="" />联系酒店</a>
+					</p>
+				</div>
+			</div>
+			<p class="foot_bar_sub foot_bar_can">
+				<a href="index_shop.html" class="sub_btn gm">再次购买</a>
+				<a href="submit_order_can.html" class="sub_btn tj">立即提交</a>
+				<a href="javascript:;" class="sub_btn sub_btn2 sc">删除订单</a>
+				<a href="javascript:;" class="sub_btn sub_btn2 qx">取消订单</a>
+			</p>
+		</div>
+
+		<!--删除订单提示弹窗-->
+		<div class="tan_drop tan4 tan_dele">
+			<div class="tan_box">
+				<p class="text">您确定要删除订单吗?</p>
+
+				<p class="btn3 room_btn">
+					<a href="javascript:;" class="cancle">取消</a>
+					<a href="javascript:;" class="ok">确定</a>
+				</p>
+
+			</div>
+		</div>
+		<p class="dele_ok order_tip">删除订单成功</p>
+		<!--取消订单提示弹窗-->
+		<div class="tan_drop tan4 tan_cancle">
+			<div class="tan_box">
+				<p class="text">您确定要取消订单吗?</p>
+
+				<p class="btn3 room_btn">
+					<a href="javascript:;" class="cancle">取消</a>
+					<a href="javascript:;" class="ok">确定</a>
+				</p>
+			</div>
+		</div>
+		<p class="cancle_ok order_tip">取消订单成功</p>		
+		<!--无网络弹窗-->
+		<div class="no_network">
+			<div class="tan_box">
+				<p class="text">网络不给力，请稍后再试！</p>
+				<p class="btn3 room_btn">
+					<a href="javascript:;">重新加载</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".sc").click(function() {
+					$(".tan_dele").fadeIn();
+					$("body").css({
+						"position": "fixed",
+						"top": "0",
+						"bottom": "0",
+						"left": "0",
+						"width": "100%"
+					});
+				})
+				$(".qx").click(function() {
+					$(".tan_cancle").fadeIn();
+					$("body").css({
+						"position": "fixed",
+						"top": "0",
+						"bottom": "0",
+						"left": "0",
+						"width": "100%"
+					});
+				})
+				$(".cancle").click(function() {
+					$(this).parents(".tan_drop").fadeOut();
+					$("body").removeAttr("style")
+				})
+				$(".ok").click(function() {
+					$(this).parents(".tan_drop").fadeOut();
+					$(this).parents(".tan_drop").next(".order_tip").fadeIn().delay(1000).fadeOut()
+					$("body").removeAttr("style")
+				})
+			})
+		</script>
+	</body>
+
+</html>

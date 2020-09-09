@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>游泳池</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/l_tell_pop.css"/>		
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+		<script type="text/javascript" src="js/oder.js"></script>
+	</head>
+
+	<body>
+		<div class="w_content3">
+			<!--头部-->
+			<div class="navBar">
+				<p class="navName">商品详情</p>
+				<a href="entertainment_shoplists.html" class="backArrow"><img src="images/back-arrow.png" alt="" /></a>
+			</div>
+			<!--头部-->
+			<!--banner-->
+			<!--轮播开始-->
+			<div class="w_mian">
+				<ul class="clearfix">
+					<li class="w_hleft">
+						<div id="slideBox" class="slideBox">
+							<div class="bd">
+								<ul>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="hd">
+								<ul>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>			
+				<p class="s_xie">联系商家</p>
+				<!--<div class="s_poition">
+				</div>-->
+			</div>
+			<!--轮播结束-->
+			<!--主体-->
+			<div class="l_marbottom">
+				<div class="cater_name">
+					<div class="cater_name_left fl">
+						<p>
+							游泳池
+						</p>
+					</div>
+				</div>
+				<div class="cater_like" style="padding: 0;">
+					<div class="cater_like_left fl">
+						<div class="cater_name_right">
+							<p>
+								<span class="price">&yen;990.00</span><span><del>&yen;99.00</del></span>
+							</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="cater_middle" style="margin-bottom: 0;">
+				<div class="cater_details_name">
+					<span>商品详情</span>
+					<i></i>
+				</div>					
+				<div class="cater_matter">
+					<p>在大型日照游泳池内畅泳，倘佯于绿水蓝天之间，尽情放松身心之余，更可欣赏四周的京城风貌。池畔备有休憩躺椅，客人可以在此稍事休息，呷一口清凉冷饮，恣意欣赏四周景色。无论公干或旅游，这里绝对是舒展身心，卸下疲惫心灵的好地方。</p>
+					<p class="img">
+						<img src="images/qingjiu.jpg">
+					</p>
+				</div>
+				<p class="end_tip"><img src="images/l_icon_end.png" alt="" /></p>
+			</div>
+		</div>
+			
+		</div>
+			
+			<!------电话拨打提醒---弹窗-->
+			<div class="tan_drop bg_tell">
+				<div class="tan_box">
+					<p class="text">拨打电话 <span>5695 8888</span></p>
+					<p class="room_btn"><a href="javascript:;" class="cancle">取消</a><a href="javascript:;" class="ok">确定</a></p>
+				</div>
+			</div>
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$(".s_xie").click(function(){
+					$(".bg_tell").fadeIn();
+				})
+				$(".bg_tell .cancle").click(function(){
+					$(".bg_tell").fadeOut();
+				})
+			})
+		</script>
+
+		<!--轮播js-->
+		<script type="text/javascript">
+			TouchSlide({
+				slideCell: "#slideBox",
+				titCell: ".hd ul", //开启自动分页 autoPage:true，此时设置 titCell 为导航元素包裹层
+				mainCell: ".bd ul",
+				effect: "leftLoop",
+				autoPage: true, //自动分页
+				autoPlay: true //自动播放
+			});
+		</script>
+		<!--轮播js结束-->	
+	</body>
+
+</html>
+</body>
+
+</html>

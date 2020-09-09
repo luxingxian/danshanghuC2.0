@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+	</head>
+	<body>		
+	<!--轮播开始-->
+	<div class="min_content">
+		<div class="w_mian">
+			<ul class="clearfix">
+				<li class="w_hleft">
+					<div id="slideBox" class="slideBox">
+						<div class="bd">
+							<ul>
+								<li>
+									<a class="pic" href="javascript:;"><img src="images/banner1.png" /></a>
+								</li>
+								<li>
+									<a class="pic" href="javascript:;"><img src="images/bnner_2.jpg"></a>
+								</li>
+								<li>
+									<a class="pic" href="javascript:;"><img src="images/bnner_3.jpg" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="hd">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<p class="min_img">
+				<a href="index.html"><img src="images/icon_back_drop.png"/></a>							
+			</p>
+			<a href="tel:18518099332" class="l_phone"><img src="images/icon_phone9.png" alt="" /></a>
+			<div class="s_poition">			
+			</div>			
+		</div>
+		<div class="min_text clear">
+			<div class="text_div fl">
+				<p class="frist">&yen;3800.00</p>
+				<p class="last">高级特惠标准套房</p>
+			</div>
+			<div class="s_shop fr clear">
+				<p class="fl">
+					<img src="images/icon_cian2.png" />
+				</p>
+				<p class="fl">
+					<img src="images/icon_yu2.png" />
+				</p>
+			</div>
+		</div>
+		<div class="s_grop clear">
+			<span class="s_span fl">房间面积 : </span>
+			<p class="fl clear">
+				<span class="fl">12-16㎡</span>
+				<span class="fl">可住20人</span>
+				<span class="fl">不含早餐</span>
+			</p>
+		</div>
+		<div class="s_grop clear">
+			<span class="s_span fl">房间设施 : </span>
+			<p class="fl clear">
+				<span class="fl">床型 大床2.0米</span>
+				<span class="fl">能否加床</span>
+				<span class="fl">不能</span>
+			</p>
+		</div>
+		<div class="sheshi">
+			<ul class="clear">				
+				<li class="fl clear">
+					<p class="fl img_1">
+						<img src="images/icon_h1.png"/>			
+					</p>
+					<p class="list_text2 fl">吹风机</p>
+				</li>
+				<li class="fl clear">
+					<p class="s_left fl img_2">
+						<img src="images/icon_h2.png"/>			
+					</p>
+					<p class="list_text2 fl">洗发露</p>
+				</li>
+				<li class="fl clear">
+					<p class="fl img_4">
+						<img src="images/icon_h4.png"/>			
+					</p>
+					<p class="list_text2 fl">洗发露</p>
+				</li>
+				<li class="s_right fl clear">
+					<p class="fl img_3">
+						<img src="images/icon_h3.png"/>			
+					</p>
+					<p class="list_text2 fl">浴巾</p>
+				</li>				
+			</ul>
+			<p class="s_number">更多....</p>			
+		</div>
+		<a href="submit_order.html"><p class="min_button">预订</p></a>
+		<p class="button_hui">已满房</p>
+		<p class="button_hui">暂不可预订</p>
+		<p class="button_hui">不支持线上预订</p>
+	</div>	
+		<script src="js/jquery.min.js"></script>
+		<script src="js/oder.js"></script>
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<!--轮播js-->
+		<script type="text/javascript">
+			TouchSlide({
+				slideCell: "#slideBox",
+				titCell: ".hd ul", //开启自动分页 autoPage:true，此时设置 titCell 为导航元素包裹层
+				mainCell: ".bd ul",
+				effect: "leftLoop",
+				autoPage: true, //自动分页
+//				autoPlay: true //自动播放
+			});
+		</script>
+		<script>
+			$(function(){
+				var aH=$('.sheshi').height();
+				$('.sheshi').click(function(){
+					if($(this).height()==aH){
+						var Height=$('.sheshi ul').height();
+						$(this).animate({ height:Height},"normal")
+						$('.s_number').fadeOut();
+					}
+				})
+			});
+			$(function(){
+				var aLi=$('.sheshi ul li').length;	
+				if(aLi<=3){
+					$('.s_number').hide();	
+				}else{
+					$('.s_number').show();
+				}
+			});
+		</script>	
+	</body>
+</html>

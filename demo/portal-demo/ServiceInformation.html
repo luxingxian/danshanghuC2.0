@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>服务指南</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />		
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+		<script src="js/oder.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="navBar">
+			<p class="navName"><span>服务指南</span></p>
+			<a href="index.html" class="backArrow"><img src="images/back-arrow.png" alt="" /></a>
+		</div>
+		<!--头部-->
+	<!--主体-->
+		<div class="subnav1" style="background-color: #fff; padding-bottom: 0.8em;">
+			<!--轮播开始-->
+			<div class="w_mian">
+				<ul class="clearfix">
+					<li class="w_hleft">
+						<div id="slideBox" class="slideBox">
+							<div class="bd">
+								<ul>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg"></a>
+									</li>
+									<li>
+										<a class="pic" href="javascript:;"><img src="images/songhe1.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="hd">
+								<ul>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>			
+				<p class="s_xie">联系酒店</p>
+				<!--<div class="s_poition">
+				</div>-->
+			</div>
+			<!--轮播-->
+			<div class="current">
+				<div class="s_current">
+					<p class="s_cur">北京四季酒店</p>
+					<div class="warp">
+						<a href="hotel-details.html" class=" clear">
+							<p class="fl">设施  :  &nbsp;</p>
+							<p class="z_icon fl">
+								<img src="img/xingli.png" alt="" />
+								<img src="img/gui.png" alt="" />
+								<img src="img/yusan.png" alt="" />
+								<img src="img/gui.png" alt="" />
+								<img src="img/xingli.png"/>
+								<span>...</span>
+							</p>
+							<p class="s_cp fr">
+								<img src="images/icon_6.png"/>					
+							</p>
+							<p class="fr">酒店详情</p>
+						</a>
+					</div>
+					<div class="warp1">
+						<a href="address.html" class=" clear">
+							<p class="fl">地址  : 北京朝阳区亮马桥路48号</p>
+							<p class="s_cp fr">
+								<img src="images/icon_6.png"/>					
+							</p>
+						</a>
+					</div>
+				</div>					
+			</div>
+			<div class="font">
+				<div class="s_font clear">
+					<span class="s_span1 fl"></span>
+					<span class="s_span2 fl">叫车服务</span>
+					<span class="s_span1 fl"></span>
+				</div>
+				<div class="copy">
+						<p class="s_img1">
+							<img src="images/qingjiu.jpg"/>				
+						</p>
+						<div class="master">
+							<p class="s_master">
+								<span class="fl">叫车服务</span>
+								<span class="fr">服务电话 : 13514515545</span>
+							</p>
+						</div>
+						<p class="s_tet">
+							我们为您提供叫车服务，80/小时，提供各种商务车型，专业的司机负责接送，良好的服务态度给您的出行带来便利，为客人提供方便是我们的服务宗旨。
+						</p>
+				</div>
+			</div>
+			<div class="font">
+				<div class="s_font clear">
+					<span class="s_span1 fl"></span>
+					<span class="s_span2 fl">洗衣服务</span>
+					<span class="s_span1 fl"></span>
+				</div>
+				<div class="copy">
+						<p class="s_img1">
+							<img src="images/qingjiu.jpg"/>				
+						</p>
+						<div class="master">
+							<p class="s_master">
+								<span class="fl">洗衣服务</span>
+								<span class="fr">服务电话 : 4001000850</span>
+							</p>
+						</div>
+						<p class="s_tet">
+							提供刷卡式和投币式自助洗衣机，操作简单，使用方便。
+						</p>
+				</div>
+			</div>
+			<div class="font">
+				<div class="s_font clear">
+					<span class="s_span1 fl"></span>
+					<span class="s_span2 fl">叫醒服务</span>
+					<span class="s_span1 fl"></span>
+				</div>
+				<div class="copy">
+						<p class="s_img1">
+							<img src="images/qingjiu.jpg"/>				
+						</p>
+						<div class="master">
+							<p class="s_master">
+								<span class="fl">叫醒服务</span>
+								<span class="fr">服务电话 : 4001000850</span>
+							</p>
+						</div>
+						<p class="s_tet">
+							总台根据您的需求在指定时间给您打电话或敲门，提醒您办理重要事项。
+						</p>
+				</div>
+			</div>
+		</div>
+	<!--主体-->
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.lazyload.js"></script>
+	<script src="js/TouchSlide.1.1.js"></script>
+	<script type="text/javascript">
+				TouchSlide({
+					slideCell: "#slideBox",
+					titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell: ".bd ul",
+					effect: "leftLoop",
+					autoPage: true,//自动分页
+					autoPlay: true //自动播放
+				});
+			</script>
+	</body>
+</html>

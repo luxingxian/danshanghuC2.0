@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的优惠券</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/oder.js"></script>
+	</head>
+
+	<body style="background: #f0f0f4;">
+		<!--头部-->
+		<div class="top">
+			<p>
+				<a href="index.html"><img src="images/icon_back.png"></a>我的优惠券
+			</p>
+		</div>
+		<!--头部-->
+		<div class="f_list_top">
+			<!--<p class="f_list_hot f_click clear">
+				<span class="fl">不适用优惠券</span>
+				<span class="fr"><em class="f_em outem"></em></span>
+			</p>-->
+			<div class="f_box_top">
+				<div class="f_list_mian">
+					<div class="f_list_back f_click">
+						<i class="f_ding"></i>
+						<div class="clear">
+							<p class="f_list_left fl">
+								<span class="f_list_span">
+									<i>￥</i>
+									<em>50.00</em>
+								</span>
+								<span class="f_xianzhi">北京合源科源</span>
+							</p>
+							<p class="f_list_right fr">
+								<span class="f_sizi">优惠券立减15元</span>
+								<span class="f_sizi_bottom"><i>&bull;</i>满 300 元可用</span>
+								<span class="f_sizi_bottom f_sizi_red"><i>&bull;</i>不与其它优惠共享</span>
+								<span class="f_sizi_bottom"><i>&bull;</i>有效期 2017.08.01 至 2017.08.31</span>
+							</p>
+						</div>
+						<span class="f_potion"><em class="outem"></em></span>
+					</div>
+					<div class="f_list_back f_click">
+						<i class="f_ding"></i>
+						<div class="clear">
+							<p class="f_list_left fl">
+								<span class="f_list_span">
+									<i>￥</i>
+									<em>50.00</em>
+								</span>
+								<span class="f_xianzhi">北京合源科源</span>
+							</p>
+							<p class="f_list_right fr">
+								<span class="f_sizi">优惠券立减1555.00元</span>
+								<span class="f_sizi_bottom"><i>&bull;</i>满 300.00 元可用</span>
+								<span class="f_sizi_bottom"><i>&bull;</i>与其它优惠共享</span>
+								<span class="f_sizi_bottom"><i>&bull;</i>有效期 2017.08.01 至 2017.08.31</span>
+							</p>
+						</div>
+						<span class="f_potion"><em class="outem"></em></span>
+					</div>
+				</div>
+				<p class="f_hui">本订单不可用优惠券</p>
+				<div class="f_list_mian">
+					<div class="f_list_back">
+						<i class="f_ding1"></i>
+						<div class="clear">
+							<p class="f_list_left fl">
+								<span class="f_list_span">
+									<i class="f_span_red">￥</i>
+									<em class="f_span_red">50</em>
+								</span>
+								<span class="f_xianzhi f_span_red">北京合源科源</span>
+							</p>
+							<p class="f_list_right fr">
+								<span class="f_sizi f_span_red">优惠券立减15元</span>
+								<span class="f_sizi_bottom f_span_red"><i>&bull;</i>满 300 元可用</span>
+								<span class="f_sizi_bottom f_span_red"><i>&bull;</i>不与其它优惠共享</span>
+								<span class="f_sizi_bottom f_span_red"><i>&bull;</i>有效期 2017.08.01 至 2017.08.31</span>
+							</p>
+						</div>
+					</div>
+					<div class="f_list_back">
+						<i class="f_ding1"></i>
+						<div class="clear">
+							<p class="f_list_left fl">
+								<span class="f_list_span">
+									<i class="f_span_red">￥</i>
+									<em class="f_span_red">50</em>
+								</span>
+								<span class="f_xianzhi f_span_red">北京合源科源</span>
+							</p>
+							<p class="f_list_right fr">
+								<span class="f_sizi f_span_red">优惠券立减15元</span>
+								<span class="f_sizi_bottom f_span_red"><i>&bull;</i>满 300 元可用</span>
+								<span class="f_sizi_bottom f_span_red"><i>&bull;</i>不与其它优惠共享</span>
+								<span class="f_sizi_bottom f_span_red"><i>&bull;</i>有效期 2017.08.01 至 2017.08.31</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="f_plase">
+			<a href="javascript:;" class="f_button">确定</a>
+		</p>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$(".f_click").click(function() {
+					$('.outem').removeClass("f_em");
+					$(this).find('.outem').addClass("f_em");
+				})
+			});
+		</script>
+	</body>
+
+</html>
